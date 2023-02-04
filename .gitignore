@@ -1,10 +1,14 @@
 /node_modules
 /Real Size
 /img
-# /dist
+/dist/!css
+/dist/!fonts
+/dist/!img
+/dist/!js
+/dist/!index.html
 /src
 /app
 /My-Home-Jungle
 /Repository
 gulpfile.js
-# index.html
+index.html
