@@ -1,0 +1,519 @@
+@import url('slider/swiper-bundle.css')
+
+$bg-main-color: #EDE1DE
+
+@font-face
+    font-family: 'Raleway'
+    src: url('../fonts/Raleway/static/Raleway-Regular.ttf')
+
+*,
+*:before,
+*:after
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    font-weight: normal
+
+ol,
+ul
+    list-style: none
+
+a
+    text-decoration: none
+
+input[type='search']::-webkit-search-decoration,
+input[type='search']::-webkit-search-cancel-button,
+input[type='search']::-webkit-search-results-button,
+input[type='search']::-webkit-search-results-decoration
+    display: none
+
+body
+    font-family: 'Raleway',
+
+body::-webkit-scrollbar
+    width: 10px
+    background-color: #f9f9fd
+
+body::-webkit-scrollbar-thumb
+    border-radius: 10px
+    background-color: #87957E
+
+body::-webkit-scrollbar-track
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2)
+    border-radius: 10px
+    background-color: #f9f9fd
+
+.container
+    max-width: 1210px
+    margin: 0 auto
+
+.header-main
+    background-color: $bg-main-color
+    min-width: 1140px // 1140px ?
+
+    .header__container
+        display: flex
+        align-items: center
+        justify-content: space-between
+
+        .header__left-block
+            display: flex
+            align-items: center
+            .main-logo__img
+                width: 111px
+                height: 51px
+                padding: 3px 0px 0px
+
+            .left-block__nav-head
+                margin-left: 69px
+
+                .nav-head__ul
+                    display: flex
+
+                    .nav-head__li:nth-child(1)
+                        margin-right: 40px
+                    .nav-head__li:nth-child(2)
+                        margin-right: 40px
+                    .nav-head__li:nth-child(3)
+                        margin-right: 40px
+                    .nav-head__btn
+                        color: #3A4736
+                        font-weight: 400
+                        font-size: 20px
+                        line-height: 20px
+
+        .header__right-block
+            display: flex
+            align-items: center
+
+            .right-block__search-head
+                display: flex
+                align-items: center
+                position: relative
+                margin-right: 20px
+
+                .search-head__input
+                    border: 1px solid #afaf9ea0
+                    border-radius: 6px
+                    background-color: transparent
+                    width: 176px
+                    height: 40px
+                    padding: 8px
+                    font-weight: 400
+                    font-size: 16px
+                    line-height: 24px
+                    &::placeholder
+                        font-weight: 400
+                        font-size: 16px
+                        line-height: 20px
+
+                .search-head__btn
+                    position: absolute
+                    right: 11px
+                    .btn-head__img
+                        fill: #87957E
+                        &:hover
+                            fill: black
+
+            .right-block__btn-head
+                display: flex
+                align-items: center
+
+                .btn-head__heart
+                    margin-right: 22px
+
+                .heart__btn
+                    width: 26px
+                    height: 23px
+                    fill: none
+                    &:hover
+                        fill: #87957E
+
+                .person__btn
+                    width: 26px
+                    height: 23px
+                    fill: none
+                    stroke: black
+                    &:hover
+                        fill: #87957E
+                        stroke: #87957E
+
+    .itcss
+        position: relative
+        /* width: 100%;  */
+        padding-bottom: 50px
+        .itcss__wrapper
+            // border-radius: 6px
+            position: relative
+            overflow: hidden
+            background-color: #eee
+            // height: 600px
+            .itcss__items
+                display: flex
+                transform-style: preserve-3d
+                backface-visibility: hidden
+                transition: transform 1.5s ease
+                will-change: transform
+
+                .itcss__item
+                    position: relative
+                    flex: 0 0 100%
+                    max-width: 100%
+                    transform-style: preserve-3d
+                    backface-visibility: hidden
+                    will-change: transform
+                    // overflow: hidden
+                    .itcss__img
+                        width: 100%
+                        // max-width: 100%
+                        height: 100%
+                        // min-height: 100%
+                        object-fit: cover
+                        // object-position: top
+                        // object-fit: fill
+                .slide-2
+                    font-weight: 500
+                    font-size: 36px
+                    line-height: 45px
+                    text-indent: 3px
+                    color: #EDE1DE
+                .slide-2__text
+                    font-weight: 500
+                    font-size: 24px
+                    line-height: 20px
+                    color: #EDE1DE
+                    margin-top: 56px
+
+        .itcss__indicators
+            position: absolute
+            right: 0
+            bottom: 10px
+            left: 0
+            display: flex
+            justify-content: center
+            margin: 0 15%
+            padding-left: 0
+            list-style: none
+            user-select: none
+
+        .itcss__indicator
+            flex: 0 1 auto
+            width: 30px
+            height: 2px
+            margin-right: 3px
+            margin-left: 3px
+            background-color: rgb(255 255 255 / 50%)
+            background-clip: padding-box
+            border-top: 10px solid transparent
+            border-bottom: 10px solid transparent
+            cursor: pointer
+            box-sizing: initial
+        .itcss__indicator_active
+            background-color: #fff
+        .transition-none
+            transition: none
+    .slider__call
+        position: absolute
+        top: 0
+        .call__title
+            font-weight: 500
+            font-size: 36px
+            line-height: 45px
+            text-indent: 3px
+            color: #3A4736
+            margin-top: 81px
+
+        .call__btn
+            width: 250px
+            height: 50px
+            background: #87957E
+            border: 1px solid #3A4736
+            box-shadow: 0px 0px 5px #87957E, 0px 0px 10px #B1BEA8
+            border-radius: 6px
+            margin-top: 60px
+            font-weight: 400
+            font-size: 20px
+            line-height: 20px
+            color: #EEE4E2
+            cursor: pointer
+
+//  Interior  ////////////////
+
+.interior
+    background-color: $bg-main-color
+    min-width: 1140px
+    padding-bottom: 57px
+    border: 1px solid #3A4736
+    border-radius: 6px 6px 6px 6px
+    // border-top: none
+
+    .interior__title
+        margin-bottom: 54px
+        padding-top: 94px
+        font-weight: 600
+        font-size: 32px
+        line-height: 20px
+        color: #3A4736
+
+    .interior__cards
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr
+        grid-template-rows: 394px 394px
+        gap: 28px 30px
+        grid-template-areas: "Area1 Area2 Area3" "Area4 Area4 Area3"
+        padding-bottom: 122px
+
+        .img-div
+            width: 100%
+            height: 100%
+
+            .interior__img
+                width: 100%
+                height: 100%
+                object-fit: cover
+                border: 1px solid #87957E
+                border-bottom: none
+                border-radius: 6px 6px 0px 0px
+
+        .interior__caption
+            background-color: white
+            display: flex
+            justify-content: center
+            align-items: center
+            background: #FDFDFD
+            border: 1px solid #87957E
+            border-top: none
+            border-radius: 0px 0px 6px 6px
+            height: 70px
+            .interior__text
+                font-weight: 400
+                font-size: 20px
+                line-height: 20px
+                color: #3A4736
+
+        .interior__card:nth-child(1)
+            grid-area: Area1
+            margin-bottom: 70px
+
+        .interior__card:nth-child(4)
+            grid-area: Area4
+
+        .interior__card:nth-child(2)
+            grid-area: Area2
+            margin-bottom: 70px
+
+        .interior__card:nth-child(3)
+            grid-area: Area3
+            width: 100%
+            height: 100%
+
+.articles
+    background-color: $bg-main-color
+    min-width: 1140px
+    // padding-top: 135px
+    padding-bottom: 62px
+    position: relative
+
+    .articles__title
+        font-weight: 600
+        font-size: 32px
+        line-height: 20px
+        color: #3A4736
+        padding-top: 60px
+        padding-bottom: 58px
+
+    .swiper
+        padding-right: 2px
+        padding-left: 2px
+
+    .swiper-slide
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25)
+        border: 1px solid #87957E
+        border-radius: 6px
+        transition: .3s
+        min-height: 486px
+        overflow: hidden
+        display: inline-block
+        &:hover
+            transform-origin: right
+            transform: scale(1.04)
+
+    .swiper-slide-active:hover
+        transform-origin: 0% 50%
+        transform: scale(1.04)
+
+    .swiper-slide-next:hover
+        transform-origin: 0% 50%
+        transform: scale(1.04)
+
+    .article-title_div
+        display: flex
+        justify-content: center
+
+        .article-title
+            max-width: 240px
+            font-weight: 400
+            font-size: 16px
+            line-height: 20px
+            color: #3A4736
+            text-align: center
+            -webkit-line-clamp: 3
+            display: -webkit-box
+            -webkit-box-orient: vertical
+            overflow: hidden
+
+    .swiper-slide img
+        height: 380px
+        width: 100%
+        object-fit: cover
+        border-radius: 6px 6px 0px 0px
+        margin-bottom: 20px
+        border-bottom: 1px solid #87957E
+
+    .swiper-pagination
+        // display: flex
+        // justify-content: center
+        position: inherit !important
+        // width: 100% !important
+        padding-top: 40px
+
+        .swiper-pagination-bullet
+            background: #87957E
+            width: 19px !important
+            height: 19px !important
+            border: 2px solid #3A4736
+            border-radius: 85.8369px
+        .swiper-pagination-bullet-active
+            width: 53px !important
+            height: 19px !important
+            background: #87957E
+            border: none
+            border-radius: 85.8369px
+    .articles__background
+        width: 100%
+        min-height: 239px
+        background: #87957E
+        border: 1px solid #3A4736
+        border-radius: 6px
+        position: absolute
+        top: 261px
+
+    .articles__showMore
+        display: flex
+        align-items: center
+        justify-content: right
+        .articles__btn
+            font-weight: 500
+            font-size: 24px
+            line-height: 20px
+            color: #3A4736
+            transform: rotate(0.15deg)
+            padding-right: 12px
+            cursor: pointer
+
+.about-plants
+    background: #FFFFFF
+    border: 1px solid #3A4736
+    border-radius: 6px
+    min-width: 1140px
+    .about-plants__title
+        font-weight: 500
+        font-size: 32px
+        line-height: 20px
+        color: #3A4736
+        padding-top: 51px
+
+    .swiper
+        padding-right: 5px
+        padding-left: 5px
+        padding-top: 61px
+        max-width: 900px
+        margin: 0 auto
+
+        .swiper-slide
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25)
+            border: 1px solid #87957E
+            border-radius: 6px
+            transition: .3s
+            min-height: 486px
+
+        .swiper-slide-active:hover
+            transform-origin: 0% 50%
+            transform: scale(1.09)
+
+        .swiper-slide-next:hover
+            transform: scale(1.09)
+
+        .swiper-slide-next ~ .swiper-slide
+            &:hover
+                transform-origin: right
+                transform: scale(1.09)
+
+        .about-plants__card_img img
+            height: 380px
+            width: 100%
+            object-fit: cover
+            border-radius: 6px 6px 0px 0px
+            margin-bottom: 20px
+            border-bottom: 1px solid #87957E
+        .swiper-pagination
+            position: inherit !important
+            padding-top: 75px
+
+            .swiper-pagination-bullet
+                background: #87957E
+                width: 19px !important
+                height: 19px !important
+                border: 2px solid #3A4736
+                border-radius: 85.8369px
+            .swiper-pagination-bullet-active
+                width: 53px !important
+                height: 19px !important
+                background: #87957E
+                border: none
+                border-radius: 85.8369px
+
+        .about-plants-title_div
+            display: flex
+            justify-content: center
+
+        .about-plants-text
+            max-width: 240px
+            font-weight: 400
+            font-size: 16px
+            line-height: 20px
+            color: #3A4736
+            text-align: center
+            -webkit-line-clamp: 3
+            display: -webkit-box
+            -webkit-box-orient: vertical
+            overflow: hidden
+
+    .articles__showMore
+        display: flex
+        align-items: center
+        justify-content: right
+        padding-bottom: 100px
+        .articles__btn
+            font-weight: 500
+            font-size: 24px
+            line-height: 20px
+            color: #3A4736
+            transform: rotate(0.15deg)
+            padding-right: 12px
+            cursor: pointer
+
+// @media screen and (max-width: 1210px)
+//     .container
+//         max-width: 1140px
+//         margin: 0 auto
+//     .header-main
+//     //background-color: $bg-main-color
+//         min-width: 992px // ?
+
+// @media screen (min-width: 992px) and (max-width: 1200px)
+// .container
+//     max-width: 1140px
+//     margin: 0 auto
+// // .header-main
+// //     min-width: 992px
