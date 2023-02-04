@@ -1,1 +1,10 @@
-node_modules
+
+/app
+/img
+/node_modules
+/My-Home-Jungle
+/Real Size
+/Repository
+/src
+index.html
+gulpfile.js
