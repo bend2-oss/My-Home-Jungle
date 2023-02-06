@@ -37,7 +37,11 @@ ul {
 }
 
 header {
-  border-bottom: 1px solid #3A4736;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  background-color: #EDE1DE;
 }
 
 .header-navigation {
@@ -54,8 +58,8 @@ header {
 }
 
 .icon-heart {
-  width: 24px;
-  height: 24px;
+  width: 26px;
+  height: 23px;
   display: block;
   background: url("../img/favourites_icon.svg") no-repeat;
 }
@@ -225,28 +229,87 @@ main {
   position: absolute;
   display: none;
   width: 200px;
-  height: 50px;
+  height: 60px;
   background-color: #fff;
   color: #3A4736;
   border: 1px solid #3A4736;
   border-radius: 6px;
   text-align: center;
-  padding-top: 14px;
+  padding-top: 20px;
 }
 
-.card:first-child > .card-button:first-child {
-  top: 50%;
-  left: 25%;
+.card-button-like {
+  z-index: 2;
+  position: absolute;
+  display: none;
+  padding: 6px;
+  width: 43px;
+  height: 41px;
+  text-align: center;
+  border-radius: 6px;
+  background-color: #D9D9D9;
+  top: 4px;
+  right: 4px;
 }
 
-.card:first-child > .card-button:nth-child(2) {
-  top: 60%;
-  right: 25%;
+.card-button-like:hover .button-like-image {
+  fill: red;
 }
 
 .card:first-child > .card-button:nth-child(3) {
-  top: 35%;
+  padding-top: 10px;
+}
+
+.card:first-child > .card-button:first-child {
+  top: 22%;
+  left: 40%;
+}
+
+.card:first-child > .card-button:nth-child(2) {
+  top: 40%;
+  right: 20%;
+}
+
+.card:first-child > .card-button:nth-child(3) {
+  top: 45%;
+  right: 1%;
+}
+
+.card:first-child > .card-button:nth-child(4) {
+  top: 50%;
+  left: 40%;
+}
+
+.card:nth-child(2) > .card-button:first-child {
+  top: 40%;
   right: 5%;
+}
+
+.card:nth-child(2) > .card-button:nth-child(2) {
+  top: 45%;
+  left: 6%;
+  padding-top: 10px;
+}
+
+.card:nth-child(3) > .card-button:first-child {
+  top: 12%;
+  left: 43%;
+}
+
+.card:nth-child(3) > .card-button:nth-child(2) {
+  top: 55%;
+  left: 60%;
+}
+
+.card:nth-child(3) > .card-button:nth-child(3) {
+  top: 35%;
+  left: 30%;
+  padding-top: 10px;
+}
+
+.card:nth-child(3) > .card-button:nth-child(4) {
+  top: 30%;
+  left: 5%;
 }
 
 .photocards-buttons {
@@ -315,7 +378,6 @@ footer {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  margin-bottom: 64px;
 }
 
 .footer-navigation {
@@ -325,7 +387,7 @@ footer {
 }
 
 .footer-logo {
-  width: 199px;
+  width: 180px;
   height: 101px;
   display: block;
   background: url("../img/footer_logo.svg") no-repeat;

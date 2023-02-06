@@ -4,12 +4,14 @@ $('.card').hover(function(){
         'transition':'1s'
     })
     $(this).children('.card-button').fadeIn()
-    console.log('there');
+    $(this).children('.card-button-like').fadeIn()
+    // console.log('there');
 }, function(){
     $(this).children('.card-image').css({
         'filter':'brightness(100%)',
         'transition':'1s'
     })
     $(this).children('.card-button').fadeOut()
+    $(this).children('.card-button-like').fadeOut()
     
 })
