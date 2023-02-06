@@ -73,8 +73,10 @@ ul{
 
 // HEADER
 header{
-    border-bottom: $border;
-    // border-radius: 0 0 $border-radius $border-radius;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+   background-color: $background-color-site;
 }
 .header-navigation{
     display: flex;
@@ -91,8 +93,8 @@ header{
 
 
 .icon-heart{
-    width: 24px;
-    height: 24px;
+    width: 26px;
+    height: 23px;
     display: block;
     background: url("../img/favourites_icon.svg") no-repeat;
 }
@@ -277,18 +279,17 @@ main{
     padding: 6px;
     width: 43px;
     height: 41px;
+    text-align: center;
     border-radius: $border-radius;
-    border: none;
-    background: url(../img/like.svg) no-repeat center center, 
-    $card-button-like;
+    background-color: $card-button-like;
     top: 4px;
     right: 4px;
 }
 
-.card-button-like:hover{
-    background: url(../img/like.svg) no-repeat center center,
-    red;
+.card-button-like:hover .button-like-image{
+    fill: red;
 }
+
 
 
 //FIRST CARD
@@ -305,7 +306,7 @@ main{
 }
 .card:first-child>.card-button:nth-child(3){
     top: 45%;
-    right: 0;
+    right: 1%;
 }
 .card:first-child>.card-button:nth-child(4){
     top: 50%;
@@ -406,7 +407,6 @@ main{
 footer{
     background-color: $footer-color;
     height: fit-content;
-    margin-bottom: 64px;
 }
 .footer-navigation{
     padding: $common-padding + 20px $common-padding * 2 + 15px;
