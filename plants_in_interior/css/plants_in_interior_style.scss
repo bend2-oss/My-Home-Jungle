@@ -13,6 +13,8 @@ $green-color: #87957E;
 $title-color: #3A4736;
 $border-color: #3A4736;
 $footer-color: #525D4D;
+$card-button-like: #D9D9D9;
+
 
 //FONT-SIZES
 $font-size: 20px;
@@ -259,30 +261,86 @@ main{
     position: absolute;
     display: none;
     width: 200px;
-    height: 50px;
+    height: 60px;
     background-color: $card-button-color;
     color: $title-color;
     border: $border;
     border-radius: $border-radius;
     text-align: center;
-    padding-top: $padding-link;
+    padding-top: 20px;
 }
 
-.card:first-child>.card-button:first-child{
-    top: 50%;
-    left: 25%;
+.card-button-like{
+    z-index: 2;
+    position: absolute;
+    display: none;
+    padding: 6px;
+    width: 43px;
+    height: 41px;
+    border-radius: $border-radius;
+    border: none;
+    background: url(../img/like.svg) no-repeat center center, 
+    $card-button-like;
+    top: 4px;
+    right: 4px;
 }
 
-.card:first-child>.card-button:nth-child(2){
-    top: 60%;
-    right: 25%;
+.card-button-like:hover{
+    background: url(../img/like.svg) no-repeat center center,
+    red;
 }
 
+
+//FIRST CARD
 .card:first-child>.card-button:nth-child(3){
-    top: 35%;
+    padding-top: 10px;
+}
+.card:first-child>.card-button:first-child{
+    top: 22%;
+    left: 40%;
+}
+.card:first-child>.card-button:nth-child(2){
+    top: 40%;
+    right: 20%;
+}
+.card:first-child>.card-button:nth-child(3){
+    top: 45%;
+    right: 0;
+}
+.card:first-child>.card-button:nth-child(4){
+    top: 50%;
+    left: 40%;
+}
+
+//SECOND CARD
+.card:nth-child(2)>.card-button:first-child{
+    top: 40%;
     right: 5%;
 }
+.card:nth-child(2)>.card-button:nth-child(2){
+    top: 45%;
+    left: 6%;
+    padding-top: 10px;
+}
 
+//THIRD CARD
+.card:nth-child(3)>.card-button:first-child{
+    top: 12%;
+    left: 43%;
+}
+.card:nth-child(3)>.card-button:nth-child(2){
+    top: 55%;
+    left: 60%;
+}
+.card:nth-child(3)>.card-button:nth-child(3){
+    top: 35%;
+    left: 30%;
+    padding-top: 10px;
+}
+.card:nth-child(3)>.card-button:nth-child(4){
+    top: 30%;
+    left: 5%;
+}
 //SECTION PHOTOCARDS BUTTONS
 .photocards-buttons{
     margin-bottom: 194px;
@@ -356,7 +414,7 @@ footer{
     justify-content: space-between;
 }
 .footer-logo{
-    width: 199px;
+    width: 180px;
     height: 101px;
     display: block;
     background: url("../img/footer_logo.svg") no-repeat;
