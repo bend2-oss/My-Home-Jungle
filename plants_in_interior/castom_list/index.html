@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- box-shadow: 0px 4px 4px #00000040; -->
+    
+
+    <ul class="topmenu">
+        <li class="select">
+            <a href="#">Все</a>
+            <ul class="submenu">
+                <li><a href="#">Гостинная</a></li>
+                <li><a href="#">Ванная комната</a></li>
+                <li><a href="#">Кухня</a></li>
+                <li><a href="#">Спальня</a></li>
+                <li><a href="#">Лоджия</a></li>
+                <li><a href="#">Детская</a></li>
+                <li><a href="#">Офис</a></li>
+                <li><a href="#">Домашний офис</a></li>
+            </ul>
+        </li>
+    </ul>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <div class="select">
+        <input class="select__input" type="hidden" name="">
+        <div class="select__head">Все</div>
+        <ul class="select__list" style="display: none;">
+            <li class="select__item">Все</li>
+            <li class="select__item">Гостинная</li>
+            <li class="select__item">Ванная комната</li>
+            <li class="select__item">Кухня</li>
+            <li class="select__item">Спальня</li>
+            <li class="select__item">Лоджия</li>
+            <li class="select__item">Детская</li>
+            <li class="select__item">Офис</li>
+            <li class="select__item">Домашний офис</li>
+        </ul>
+    </div>
+
+
+
+    <script>
+    $('.select').on('click', '.select__head', function () {
+            if ($(this).hasClass('open')) {
+                $(this).removeClass('open');
+                $(this).next().fadeOut();
+            } else {
+                $('.select__head').removeClass('open');
+                $('.select__list').fadeOut();
+                $(this).addClass('open');
+                $(this).next().fadeIn();
+            }
+        });
+
+    $('.select').on('click', '.select__item', function () {
+        $('.select__head').removeClass('open');
+        $(this).parent().fadeOut();
+        $(this).parent().prev().text($(this).text());
+        $(this).parent().prev().prev().val($(this).text());
+    });
+
+    $(document).click(function (e) {
+        if (!$(e.target).closest('.select').length) {
+            $('.select__head').removeClass('open');
+            $('.select__list').fadeOut();
+        }
+    });
+
+    </script>
+
+</body>
+</html>

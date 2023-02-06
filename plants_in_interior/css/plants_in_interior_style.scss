@@ -1,0 +1,410 @@
+// WIDTH OF BLOCKS
+$width-body: 100%;
+$width-site: 1440px;
+$width-button: 190px;
+$height-button: 35px;
+
+//COLORS
+$background-color-site: #EDE1DE;
+$background-color-calendar: #fff;
+$card-button-color: #fff;
+$font-color: #EEE4E2;
+$green-color: #87957E;
+$title-color: #3A4736;
+$border-color: #3A4736;
+$footer-color: #525D4D;
+
+//FONT-SIZES
+$font-size: 20px;
+$line-height: 20px;
+
+//PADDINGS AND MARGINS
+$padding-link: 14px;
+$common-padding: 50px;
+
+$border-width: 1px;
+$border: $border-width solid $border-color;
+$border-transparent: $border-width solid transparent;
+$border-radius: 6px;
+
+$text-decoration: none;
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: $background-color-site;
+    max-width: $width-body;
+    font-family: 'Raleway', sans-serif;
+    font-size: $font-size;
+    line-height: $line-height;
+}
+
+a{
+    text-decoration: $text-decoration;
+}
+
+ul{
+    list-style-type: none;
+}
+
+.hidden{
+    overflow: hidden;
+    position: absolute;
+    width: 0;
+    height: 0;
+    margin: -1px;
+}
+
+
+.container{
+    max-width: $width-site;
+    margin: 0 auto;
+}
+
+// HEADER
+header{
+    border-bottom: $border;
+    // border-radius: 0 0 $border-radius $border-radius;
+}
+.header-navigation{
+    display: flex;
+    justify-content: space-between;
+    padding: $padding-link + 1 $common-padding * 2 + 15px;
+}
+
+.header-logo{
+    width: 111px;
+    height: 60px;
+    display: block;
+    background: url("../img/header_logo.svg") no-repeat;
+}
+
+
+.icon-heart{
+    width: 24px;
+    height: 24px;
+    display: block;
+    background: url("../img/favourites_icon.svg") no-repeat;
+}
+
+.icon-user{
+    width: 26px;
+    height: 26px;
+    display: block;
+    background: url("../img/user_icon.svg") no-repeat;
+}
+.navigation-pages, .navigation-user{
+    display: flex;
+    align-items: center;
+}
+
+
+.navigation-pages{
+    gap: $common-padding - 10px;
+}
+
+.navigation-user{
+    gap: $padding-link + 6px;
+}
+
+.navigation-item{
+    padding: 4px;
+    border: $border-transparent;
+    border-radius: $border-radius;
+}
+
+.navigation-link{
+    color: $title-color;
+}
+
+
+.navigation-item-search{
+    position: relative;
+    padding: 5px 0 0 8px;
+    width: $common-padding * 2 + 76px;
+    height: $common-padding - 10px;
+    border: $border;
+    border-radius: $border-radius;
+}
+
+.header-search{
+    font-family: 'Raleway', sans-serif;
+    border: none;
+    outline: none;
+    color: $title-color;
+    width: $common-padding * 2 + 36px;
+    height: $padding-link;
+    background-color: $background-color-site;
+}
+.header-search::placeholder{
+    color: $green-color;
+}
+
+.navigation-item-search::after{
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: 8px;
+    background: url(../img/search_icon.svg) no-repeat;
+}
+
+/* SECTION CALENDAR */
+main{
+    flex-grow: 1;
+}
+
+.wrapper-calendar{
+    // border-bottom: $border;
+    background-color: $background-color-calendar;
+}
+
+.calendar{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: $common-padding / 2 - 5px $common-padding * 2 + 15px;
+}
+
+.calendar-button-close{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: 115px;
+    top: 10px;
+    cursor: pointer;
+}
+
+
+
+.action-title{
+    font-weight: 500;
+    color: $title-color;
+}
+
+.action-link{
+    display: block;
+    width: $width-button;
+    height: $height-button;
+    background-color: $green-color;
+    border: $border;
+    color: $background-color-calendar;
+    border-radius: $border-radius;
+    text-align: center;
+    padding-top: $padding-link - 7px;
+    margin-right: 82px;
+    box-shadow: 4px 4px 9px 1px rgba(135, 149, 126, 0.73);}
+
+// SECTION SELECTION
+.wrapper-selection{
+    border-bottom: $border;
+    border-top: $border;
+    background-color: $green-color;
+    margin-bottom: $common-padding + 10px;
+}
+.selection{
+    color: $font-color;
+    padding: $common-padding - 20px $common-padding * 2 + 15px $padding-link + 10px;
+}
+
+.selection-title{
+    font-weight: 600;
+    margin-bottom: $padding-link + 6px;
+}
+
+.selection-text{
+    margin-bottom: 30px;
+}
+
+
+//SECTION PHOTOCARDS
+.photocards{
+    display: flex;
+    flex-direction: column;
+    gap: $common-padding + 30px;
+    margin-bottom: $common-padding + 10px;
+}
+
+.card{
+    position: relative;
+    border-radius: $border-radius;
+    align-self: center;
+    width: 1210px;
+    height: 932px;
+    // cursor: pointer;
+}
+
+
+.card-image{
+    position: relative;
+    z-index: 1;
+    border: $border;
+    border-radius: $border-radius;
+    width: 1210px;
+    height: 932px;
+}
+
+
+.card-button{
+    z-index: 2;
+    position: absolute;
+    display: none;
+    width: 200px;
+    height: 50px;
+    background-color: $card-button-color;
+    color: $title-color;
+    border: $border;
+    border-radius: $border-radius;
+    text-align: center;
+    padding-top: $padding-link;
+}
+
+.card:first-child>.card-button:first-child{
+    top: 50%;
+    left: 25%;
+}
+
+.card:first-child>.card-button:nth-child(2){
+    top: 60%;
+    right: 25%;
+}
+
+.card:first-child>.card-button:nth-child(3){
+    top: 35%;
+    right: 5%;
+}
+
+//SECTION PHOTOCARDS BUTTONS
+.photocards-buttons{
+    margin-bottom: 194px;
+}
+.more-button{
+    display: block;
+    width: 384px;
+    height: $padding-link * 2;
+    margin: 0 auto $common-padding;
+    font-size: $font-size;
+    line-height: $line-height;
+    color: $font-color;
+    background-color: $green-color;
+    border: $border;
+    border-radius: $border-radius;
+}
+.buttons-pages{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+.number-buttons{
+    display: flex;
+    gap: 30px;
+    
+}
+
+.button{
+    font-size: $font-size - 4px;
+    line-height: $line-height;
+    width: 177px;
+    height: $padding-link * 2 + 2px;
+    color: $font-color;
+    background-color: $green-color;
+    border: $border;
+    border-radius: $border-radius;
+    // cursor: pointer;
+}
+
+.number{
+    padding-top: 5px;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    border: $border;
+    border-radius: $border-radius;
+}
+
+.number-link{
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    color: $title-color;
+}
+
+//LINE
+.line{
+    margin: 0 auto $common-padding * 2;
+    width: $common-padding * 10;
+    border-top: 4px solid $border-color;
+}
+// FOOTER
+footer{
+    background-color: $footer-color;
+    height: fit-content;
+    margin-bottom: 64px;
+}
+.footer-navigation{
+    padding: $common-padding + 20px $common-padding * 2 + 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.footer-logo{
+    width: 199px;
+    height: 101px;
+    display: block;
+    background: url("../img/footer_logo.svg") no-repeat;
+}
+
+.footer-navigation-pages{
+    display: flex;
+    gap: 30px;
+}
+
+.footer-navigation-column{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.navigation-column-link{
+    color: $background-color-site;
+    display: block;
+}
+
+.footer-navigation-user{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-icon{
+    display: block;
+}
+
+.icon-mail{
+    width: 41px;
+    height: 33px;
+    background: url("../img/mail_icon.svg") no-repeat;
+}
+.icon-telegram{
+    width: 42px;
+    height: 34px;
+    background: url("../img/telegram_icon.svg") no-repeat;
+}
+.icon-whatsapp{
+    width: 33px;
+    height: 33px;
+    background: url("../img/whatsapp_icon.svg") no-repeat;
+}
+.icon-vk{
+   width: 46px;
+   height: 33px;
+    background: url("../img/vk_icon.svg") no-repeat;
+}

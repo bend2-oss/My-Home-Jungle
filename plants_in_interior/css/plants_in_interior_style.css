@@ -1,0 +1,382 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #EDE1DE;
+  max-width: 100%;
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.hidden {
+  overflow: hidden;
+  position: absolute;
+  width: 0;
+  height: 0;
+  margin: -1px;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+header {
+  border-bottom: 1px solid #3A4736;
+}
+
+.header-navigation {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 115px;
+}
+
+.header-logo {
+  width: 111px;
+  height: 60px;
+  display: block;
+  background: url("../img/header_logo.svg") no-repeat;
+}
+
+.icon-heart {
+  width: 24px;
+  height: 24px;
+  display: block;
+  background: url("../img/favourites_icon.svg") no-repeat;
+}
+
+.icon-user {
+  width: 26px;
+  height: 26px;
+  display: block;
+  background: url("../img/user_icon.svg") no-repeat;
+}
+
+.navigation-pages, .navigation-user {
+  display: flex;
+  align-items: center;
+}
+
+.navigation-pages {
+  gap: 40px;
+}
+
+.navigation-user {
+  gap: 20px;
+}
+
+.navigation-item {
+  padding: 4px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+}
+
+.navigation-link {
+  color: #3A4736;
+}
+
+.navigation-item-search {
+  position: relative;
+  padding: 5px 0 0 8px;
+  width: 176px;
+  height: 40px;
+  border: 1px solid #3A4736;
+  border-radius: 6px;
+}
+
+.header-search {
+  font-family: "Raleway", sans-serif;
+  border: none;
+  outline: none;
+  color: #3A4736;
+  width: 136px;
+  height: 14px;
+  background-color: #EDE1DE;
+}
+
+.header-search::-moz-placeholder {
+  color: #87957E;
+}
+
+.header-search:-ms-input-placeholder {
+  color: #87957E;
+}
+
+.header-search::placeholder {
+  color: #87957E;
+}
+
+.navigation-item-search::after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  top: 8px;
+  background: url(../img/search_icon.svg) no-repeat;
+}
+
+/* SECTION CALENDAR */
+main {
+  flex-grow: 1;
+}
+
+.wrapper-calendar {
+  background-color: #fff;
+}
+
+.calendar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 115px;
+}
+
+.calendar-button-close {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: 115px;
+  top: 10px;
+  cursor: pointer;
+}
+
+.action-title {
+  font-weight: 500;
+  color: #3A4736;
+}
+
+.action-link {
+  display: block;
+  width: 190px;
+  height: 35px;
+  background-color: #87957E;
+  border: 1px solid #3A4736;
+  color: #fff;
+  border-radius: 6px;
+  text-align: center;
+  padding-top: 7px;
+  margin-right: 82px;
+  box-shadow: 4px 4px 9px 1px rgba(135, 149, 126, 0.73);
+}
+
+.wrapper-selection {
+  border-bottom: 1px solid #3A4736;
+  border-top: 1px solid #3A4736;
+  background-color: #87957E;
+  margin-bottom: 60px;
+}
+
+.selection {
+  color: #EEE4E2;
+  padding: 30px 115px 24px;
+}
+
+.selection-title {
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.selection-text {
+  margin-bottom: 30px;
+}
+
+.photocards {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  margin-bottom: 60px;
+}
+
+.card {
+  position: relative;
+  border-radius: 6px;
+  align-self: center;
+  width: 1210px;
+  height: 932px;
+}
+
+.card-image {
+  position: relative;
+  z-index: 1;
+  border: 1px solid #3A4736;
+  border-radius: 6px;
+  width: 1210px;
+  height: 932px;
+}
+
+.card-button {
+  z-index: 2;
+  position: absolute;
+  display: none;
+  width: 200px;
+  height: 50px;
+  background-color: #fff;
+  color: #3A4736;
+  border: 1px solid #3A4736;
+  border-radius: 6px;
+  text-align: center;
+  padding-top: 14px;
+}
+
+.card:first-child > .card-button:first-child {
+  top: 50%;
+  left: 25%;
+}
+
+.card:first-child > .card-button:nth-child(2) {
+  top: 60%;
+  right: 25%;
+}
+
+.card:first-child > .card-button:nth-child(3) {
+  top: 35%;
+  right: 5%;
+}
+
+.photocards-buttons {
+  margin-bottom: 194px;
+}
+
+.more-button {
+  display: block;
+  width: 384px;
+  height: 28px;
+  margin: 0 auto 50px;
+  font-size: 20px;
+  line-height: 20px;
+  color: #EEE4E2;
+  background-color: #87957E;
+  border: 1px solid #3A4736;
+  border-radius: 6px;
+}
+
+.buttons-pages {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.number-buttons {
+  display: flex;
+  gap: 30px;
+}
+
+.button {
+  font-size: 16px;
+  line-height: 20px;
+  width: 177px;
+  height: 30px;
+  color: #EEE4E2;
+  background-color: #87957E;
+  border: 1px solid #3A4736;
+  border-radius: 6px;
+}
+
+.number {
+  padding-top: 5px;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #3A4736;
+  border-radius: 6px;
+}
+
+.number-link {
+  display: block;
+  font-family: "Roboto", sans-serif;
+  color: #3A4736;
+}
+
+.line {
+  margin: 0 auto 100px;
+  width: 500px;
+  border-top: 4px solid #3A4736;
+}
+
+footer {
+  background-color: #525D4D;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-bottom: 64px;
+}
+
+.footer-navigation {
+  padding: 70px 115px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-logo {
+  width: 199px;
+  height: 101px;
+  display: block;
+  background: url("../img/footer_logo.svg") no-repeat;
+}
+
+.footer-navigation-pages {
+  display: flex;
+  gap: 30px;
+}
+
+.footer-navigation-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.navigation-column-link {
+  color: #EDE1DE;
+  display: block;
+}
+
+.footer-navigation-user {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-icon {
+  display: block;
+}
+
+.icon-mail {
+  width: 41px;
+  height: 33px;
+  background: url("../img/mail_icon.svg") no-repeat;
+}
+
+.icon-telegram {
+  width: 42px;
+  height: 34px;
+  background: url("../img/telegram_icon.svg") no-repeat;
+}
+
+.icon-whatsapp {
+  width: 33px;
+  height: 33px;
+  background: url("../img/whatsapp_icon.svg") no-repeat;
+}
+
+.icon-vk {
+  width: 46px;
+  height: 33px;
+  background: url("../img/vk_icon.svg") no-repeat;
+}/*# sourceMappingURL=plants_in_interior_style.css.map */
