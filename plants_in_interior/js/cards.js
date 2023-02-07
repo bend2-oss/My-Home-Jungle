@@ -3,10 +3,11 @@ $(document).ready(function(){
         // console.log(typeof(data));
         // let cards = JSON.parse(data)
         // console.log(cards);
-        let cardImage = document.createElement('div')
-        cardImage.className = "card"
+        
         $.each(data, function(key, card){
-
+            let cardImage = document.createElement('div')
+            cardImage.className = "card"
+            
             let image = document.createElement('img')
             image.className = "card-image"
             // let img = JSON.parse(card.img)
@@ -15,10 +16,10 @@ $(document).ready(function(){
             image.setAttribute("src", src)
             image.setAttribute("alt", "alt")
 
-            // cardImage.append(image)
+            cardImage.append(image)
             console.log(image);
             console.log(card)
-            // $(".photocards").append(cardImage)
+            $(".photocards").append(cardImage)
 
             $.each(card.buttons, function(index, element){
                 console.log(element);
