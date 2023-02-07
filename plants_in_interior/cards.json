@@ -1,0 +1,80 @@
+[
+    {
+        "img":"home_office.jpg",
+        "buttons":
+        [
+            {
+                "name":"Сциндапсус Потос",
+                "top":"22%",
+                "left":"40%",
+                "paddingTop": 15
+            }, 
+            {
+                "name":"Сансевиерия",
+                "top":"40%",
+                "left":"80%",
+                "paddingTop": 15
+            },
+            {
+                "name":"Монстера Деликатесная",
+                "top":"45%",
+                "left":"99%",
+                "paddingTop": 10
+            },      
+            {
+                "name":"Юкка",
+                "top":"50%",
+                "left":"40%",
+                "paddingTop": 15
+            }
+        ]
+    },
+    {
+        "img":"living_room.jpg",
+        "buttons":
+        [
+            {
+                "name":"Кариота",
+                "top":"40%",
+                "left":"95%",
+                "paddingTop": 15
+            }, 
+            {
+                "name":"Драцена Окаймленная",
+                "top":"45%",
+                "left":"95%",
+                "paddingTop": 10
+            }
+        ]
+    },
+    {
+        "img":"bathroom.jpg",
+        "buttons":
+        [
+            {
+                "name":"Сциндапсус Потос",
+                "top":"12%",
+                "left":"43%",
+                "paddingTop": 15
+            }, 
+            {
+                "name":"Юкка",
+                "top":"55%",
+                "left":"60%",
+                "paddingTop": 15
+            },
+            {
+                "name":"Драцена Окаймленная",
+                "top":"35%",
+                "left":"70%",
+                "paddingTop": 10
+            },
+            {
+                "name":"Кариота",
+                "top":"30%",
+                "left":"95%",
+                "paddingTop": 15
+            }
+        ]   
+    }
+]
