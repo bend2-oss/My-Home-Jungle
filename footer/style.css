@@ -1,0 +1,109 @@
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: normal;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+input[type=search]::-webkit-search-decoration,
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-results-button,
+input[type=search]::-webkit-search-results-decoration {
+    display: none;
+}
+
+body {
+    font-family: "Raleway";
+    font-style: normal;
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+    background-color: #f9f9fd;
+}
+
+body::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #87957E;
+}
+
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    background-color: #f9f9fd;
+}
+
+.container {
+    max-width: 1210px;
+    margin: 0 auto;
+}
+
+.main-page__footer {
+    min-width: 320px;
+    background: #525D4D;
+    border-top: 1px solid #3A4736;
+}
+
+.main-page__footer .footer__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 67px;
+    padding-bottom: 52px;
+}
+
+.main-page__footer .footer__container .footer__logo {
+    margin-right: 8px;
+    padding-top: 10px;
+}
+
+.main-page__footer .footer__container .footer__nav {
+    display: flex;
+}
+
+.main-page__footer .footer__container .footer__nav ul:nth-child(1) {
+    margin-right: 30px;
+}
+
+.main-page__footer .footer__container .footer__nav ul:nth-child(2) {
+    margin-right: 30px;
+}
+
+.main-page__footer .footer__container .footer__nav ul:nth-child(3) {
+    margin-right: 30px;
+}
+
+.main-page__footer .footer__container .footer__nav a {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+    color: #EDE1DE;
+}
+
+.main-page__footer .footer__container .footer__nav .nal_li_first,
+.main-page__footer .footer__container .footer__nav .nal_li_second {
+    padding-bottom: 20px;
+}
+
+.main-page__footer .footer__container .footer__btn svg:nth-child(1) {
+    margin-right: 20px;
+}
+
+.main-page__footer .footer__container .footer__btn svg:nth-child(2) {
+    margin-right: 20px;
+}
+
+.main-page__footer .footer__container .footer__btn svg:nth-child(3) {
+    margin-right: 20px;
+}
