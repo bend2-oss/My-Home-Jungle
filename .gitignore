@@ -8,5 +8,6 @@
 /dist/!index.html
 /src
 /app
+/.gitignore
 gulpfile.js
 # index.html
