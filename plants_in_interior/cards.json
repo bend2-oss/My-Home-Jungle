@@ -5,27 +5,27 @@
         [
             {
                 "name":"Сциндапсус Потос",
-                "top":"22%",
-                "left":"40%",
-                "paddingTop": 15
+                "top": 22,
+                "left": 40,
+                "paddingTop": 20
             }, 
             {
                 "name":"Сансевиерия",
-                "top":"40%",
-                "left":"80%",
-                "paddingTop": 15
+                "top": 40,
+                "left": 63,
+                "paddingTop": 20
             },
             {
                 "name":"Монстера Деликатесная",
-                "top":"45%",
-                "left":"99%",
+                "top": 45,
+                "left": 82,
                 "paddingTop": 10
             },      
             {
                 "name":"Юкка",
-                "top":"50%",
-                "left":"40%",
-                "paddingTop": 15
+                "top": 50,
+                "left": 40,
+                "paddingTop": 20
             }
         ]
     },
@@ -35,14 +35,14 @@
         [
             {
                 "name":"Кариота",
-                "top":"40%",
-                "left":"95%",
-                "paddingTop": 15
+                "top": 40,
+                "left": 80,
+                "paddingTop": 20
             }, 
             {
                 "name":"Драцена Окаймленная",
-                "top":"45%",
-                "left":"95%",
+                "top": 45,
+                "left": 6,
                 "paddingTop": 10
             }
         ]
@@ -53,27 +53,27 @@
         [
             {
                 "name":"Сциндапсус Потос",
-                "top":"12%",
-                "left":"43%",
-                "paddingTop": 15
+                "top": 12,
+                "left": 43,
+                "paddingTop": 20
             }, 
             {
                 "name":"Юкка",
-                "top":"55%",
-                "left":"60%",
-                "paddingTop": 15
+                "top": 55,
+                "left": 60,
+                "paddingTop": 20
             },
             {
                 "name":"Драцена Окаймленная",
-                "top":"35%",
-                "left":"70%",
+                "top": 35,
+                "left": 30,
                 "paddingTop": 10
             },
             {
                 "name":"Кариота",
-                "top":"30%",
-                "left":"95%",
-                "paddingTop": 15
+                "top": 30,
+                "left": 5,
+                "paddingTop": 20
             }
         ]   
     }
