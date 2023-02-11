@@ -1,3 +1,3 @@
-import getDateFromSheet from "./getDateFromSheet.js";
+import setArrowUp from "./setArrowUp.js";
 
-getDateFromSheet();
+setArrowUp();

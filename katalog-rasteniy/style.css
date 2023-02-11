@@ -586,3 +586,26 @@ footer {
   .icon-vk{
     margin-right: 10px;
   }
+  .arrowTop{
+    position: fixed;
+    bottom: 50px;
+    right: 44px;
+    /* opacity: 0.5; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+  }
+  .arrowTop p{
+    margin-top: 0;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+    color: #3A4736;
+  }
+
+  .show {
+    display: flex;
+  }
