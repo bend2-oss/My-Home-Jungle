@@ -11,14 +11,20 @@ body {
   background: #FFFFFF;
 }
 .search_plant_wrap {
+  width: 1210px;
   height: 60px;
-  margin: 0 113px;
+  margin: 0 auto;
   font-size: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
-.search_plant_wrap input {
+.search_plant_wrap_button {
+  display: flex;
+  justify-content: space-between;
+}
+.search_plant_wrap_button input {
   background: #87957E;
   border: 0.5px solid #3A4736;
   box-shadow: 4px 4px 9px 1px rgba(135, 149, 126, 0.73);
@@ -28,12 +34,20 @@ body {
   font-family: "Raleway", sans-serif;
   padding: 4px 38px;
 }
+.search_plant_wrap_button svg {
+  width: 15px;
+  height: 15px;
+  margin-left: 50px;
+  position: relative;
+  bottom: 14px;
+}
 
 .card {
   width: 280px;
   display: flex;
   flex-direction: column;
   filter: drop-shadow(5px 5px 8px rgba(0, 0, 0, 0.25));
+  transition: 0.3s;
 }
 .card_var_1 {
   height: 390px;
@@ -91,13 +105,25 @@ body {
   border-radius: 6px;
   top: 4px;
   right: 4px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.card_like img {
-  padding: 6px 7px;
+.card_like svg {
+  width: 30px;
+  height: 30px;
 }
-.card_like a {
-  width: 100%;
-  height: 100%;
+.card_like path {
+  transition: 0.4s;
+}
+.card_like:hover path {
+  stroke: #DD4646;
+}
+
+.card:hover {
+  transform: scale(1.09);
 }
 
 .class_plants {
@@ -105,7 +131,8 @@ body {
   height: 250px;
 }
 .class_plants_wrap {
-  margin: 0 115px;
+  margin: 0 auto;
+  width: 1210px;
 }
 .class_plants_wrap_sort {
   margin-top: 40px;
@@ -172,7 +199,8 @@ body {
   position: relative;
   display: flex;
   justify-content: space-around;
-  margin: 0 115px;
+  margin: 0 auto;
+  width: 1210px;
   bottom: 40px;
 }
 .cards_2 {
@@ -180,7 +208,8 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: flex-end;
-  margin: 0 115px;
+  margin: 0 auto;
+  width: 1210px;
   bottom: 70px;
 }
 
@@ -191,9 +220,8 @@ body {
   align-items: center;
 }
 .space_text p {
-  margin-left: auto;
-  margin-right: auto;
-  width: 80%;
+  margin: 0 auto;
+  width: 1210px;
   font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -219,7 +247,8 @@ body {
 }
 .last_view_cards_posing {
   position: relative;
-  margin: 0 113px;
+  margin: 0 auto;
+  width: 1210px;
   display: flex;
   justify-content: space-between;
   bottom: 127px;
@@ -228,6 +257,7 @@ body {
   width: 280px;
   height: 404px;
   filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.25));
+  transition: 0.3s;
 }
 .last_view_card_top {
   height: 300px;
@@ -246,6 +276,9 @@ body {
 }
 .last_view_card_link {
   font-size: 16px;
+}
+.last_view_card:hover {
+  transform: scale(1.09);
 }
 
 .line {

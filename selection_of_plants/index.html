@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>katalog-rasteniy</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway&family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -81,8 +82,18 @@
                 <div class="search_plant_wrap_text">
                     <p>Выбирайте растения, которые подходят именно вам</p>
                 </div>
-                <input type="button" value="Подобрать" src="#" />
+                <div class="search_plant_wrap_button">
+                    <input type="button" value="Подобрать" src="#" />
+                    <svg class="close_button" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 5L5 15" stroke="#87957E" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M5.3335 4.66675L15.3335 14.6667" stroke="#87957E" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </div>
             </div>
+
         </section>
         <section class="class_plants">
             <div class="class_plants_wrap">
@@ -91,7 +102,7 @@
                 </div>
                 <div class="class_plants_wrap_sort">
                     <div class="block_families">
-                        <select name="families" class="sort_families sort_blocks" >
+                        <select name="families" class="sort_families sort_blocks">
                             <option value="all_fam">Все</option>
                             <option value="dec_leaf">Декоративно-лиственные</option>
                             <option value="dec_bloom">Декоративно-цветущие</option>
@@ -122,13 +133,13 @@
                     </div>
                     <div class="check_popular   ">
                         <label class="checkbox-btn">
-                            <input type="checkbox"/>
+                            <input type="checkbox" />
                             <span>По популярности</span>
                         </label>
                     </div>
                     <div class="check_alphabet">
                         <label class="checkbox-btn">
-                            <input type="checkbox"/>
+                            <input type="checkbox" />
                             <span>По алфавиту</span>
                         </label>
                     </div>
@@ -142,7 +153,13 @@
                         <div class="card_top_1">
                             <a href="#" class="card_img"><img src="img/photo.jpg" alt="monstera" /></a>
                             <div class="card_like">
-                                <a href="#"><img src="img/image_15.svg" alt="like" /></a>
+                               <svg class="like" xmlns="http://www.w3.org/2000/svg" width="82" height="73" viewBox="0 0 82 73"
+                                    fill="none">
+                                    <path
+                                        d="M73.4206 8.96749C71.5561 7.07562 69.3424 5.57486 66.9059 4.55094C64.4694 3.52701 61.8579 3 59.2206 3C56.5832 3 53.9717 3.52701 51.5352 4.55094C49.0988 5.57486 46.8851 7.07562 45.0206 8.96749L41.1512 12.8919L37.2818 8.96749C33.5157 5.14784 28.4078 3.00198 23.0818 3.00198C17.7558 3.00198 12.6479 5.14784 8.88183 8.96749C5.11576 12.7871 3 17.9677 3 23.3695C3 28.7713 5.11576 33.9519 8.88183 37.7715L12.7512 41.696L41.1512 70.5L69.5512 41.696L73.4206 37.7715C75.2859 35.8805 76.7656 33.6353 77.7752 31.1642C78.7847 28.693 79.3043 26.0444 79.3043 23.3695C79.3043 20.6946 78.7847 18.046 77.7752 15.5748C76.7656 13.1037 75.2859 10.8585 73.4206 8.96749Z"
+                                        stroke="#3A4736" stroke-width="4.73264" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
                             </div>
                         </div>
                         <div class="card_bottom">
@@ -153,7 +170,13 @@
                         <div class="card_top_2">
                             <a href="#" class="card_img"><img src="img/photo.jpg" alt="yucca" /></a>
                             <div class="card_like">
-                                <a href="#"><img src="img/image_15.svg" alt="like" /></a>
+                               <svg class="like" xmlns="http://www.w3.org/2000/svg" width="82" height="73" viewBox="0 0 82 73"
+                                    fill="none">
+                                    <path
+                                        d="M73.4206 8.96749C71.5561 7.07562 69.3424 5.57486 66.9059 4.55094C64.4694 3.52701 61.8579 3 59.2206 3C56.5832 3 53.9717 3.52701 51.5352 4.55094C49.0988 5.57486 46.8851 7.07562 45.0206 8.96749L41.1512 12.8919L37.2818 8.96749C33.5157 5.14784 28.4078 3.00198 23.0818 3.00198C17.7558 3.00198 12.6479 5.14784 8.88183 8.96749C5.11576 12.7871 3 17.9677 3 23.3695C3 28.7713 5.11576 33.9519 8.88183 37.7715L12.7512 41.696L41.1512 70.5L69.5512 41.696L73.4206 37.7715C75.2859 35.8805 76.7656 33.6353 77.7752 31.1642C78.7847 28.693 79.3043 26.0444 79.3043 23.3695C79.3043 20.6946 78.7847 18.046 77.7752 15.5748C76.7656 13.1037 75.2859 10.8585 73.4206 8.96749Z"
+                                        stroke="#3A4736" stroke-width="4.73264" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
                             </div>
                         </div>
                         <div class="card_bottom">
@@ -166,7 +189,13 @@
                         <div class="card_top_2">
                             <a href="#" class="card_img"><img src="img/photo.jpg" alt="nephrolepis" /></a>
                             <div class="card_like">
-                                <a href="#"><img src="img/image_15.svg" alt="like" /></a>
+                                <svg class="like" xmlns="http://www.w3.org/2000/svg" width="82" height="73" viewBox="0 0 82 73"
+                                    fill="none">
+                                    <path
+                                        d="M73.4206 8.96749C71.5561 7.07562 69.3424 5.57486 66.9059 4.55094C64.4694 3.52701 61.8579 3 59.2206 3C56.5832 3 53.9717 3.52701 51.5352 4.55094C49.0988 5.57486 46.8851 7.07562 45.0206 8.96749L41.1512 12.8919L37.2818 8.96749C33.5157 5.14784 28.4078 3.00198 23.0818 3.00198C17.7558 3.00198 12.6479 5.14784 8.88183 8.96749C5.11576 12.7871 3 17.9677 3 23.3695C3 28.7713 5.11576 33.9519 8.88183 37.7715L12.7512 41.696L41.1512 70.5L69.5512 41.696L73.4206 37.7715C75.2859 35.8805 76.7656 33.6353 77.7752 31.1642C78.7847 28.693 79.3043 26.0444 79.3043 23.3695C79.3043 20.6946 78.7847 18.046 77.7752 15.5748C76.7656 13.1037 75.2859 10.8585 73.4206 8.96749Z"
+                                        stroke="#3A4736" stroke-width="4.73264" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
                             </div>
                         </div>
                         <div class="card_bottom">
@@ -177,7 +206,13 @@
                         <div class="card_top_2">
                             <a href="#" class="card_img"><img src="img/photo.jpg" alt="pothos" /></a>
                             <div class="card_like">
-                                <a href="#"><img src="img/image_15.svg" alt="like" /></a>
+                               <svg class="like" xmlns="http://www.w3.org/2000/svg" width="82" height="73" viewBox="0 0 82 73"
+                                    fill="none">
+                                    <path
+                                        d="M73.4206 8.96749C71.5561 7.07562 69.3424 5.57486 66.9059 4.55094C64.4694 3.52701 61.8579 3 59.2206 3C56.5832 3 53.9717 3.52701 51.5352 4.55094C49.0988 5.57486 46.8851 7.07562 45.0206 8.96749L41.1512 12.8919L37.2818 8.96749C33.5157 5.14784 28.4078 3.00198 23.0818 3.00198C17.7558 3.00198 12.6479 5.14784 8.88183 8.96749C5.11576 12.7871 3 17.9677 3 23.3695C3 28.7713 5.11576 33.9519 8.88183 37.7715L12.7512 41.696L41.1512 70.5L69.5512 41.696L73.4206 37.7715C75.2859 35.8805 76.7656 33.6353 77.7752 31.1642C78.7847 28.693 79.3043 26.0444 79.3043 23.3695C79.3043 20.6946 78.7847 18.046 77.7752 15.5748C76.7656 13.1037 75.2859 10.8585 73.4206 8.96749Z"
+                                        stroke="#3A4736" stroke-width="4.73264" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
                             </div>
                         </div>
                         <div class="card_bottom">
@@ -190,7 +225,13 @@
                         <div class="card_top_1">
                             <a href="#" class="card_img"><img src="img/photo.jpg" alt="spathiphyllum" /></a>
                             <div class="card_like">
-                                <a href="#"><img src="img/image_15.svg" alt="like" /></a>
+                               <svg class="like" xmlns="http://www.w3.org/2000/svg" width="82" height="73" viewBox="0 0 82 73"
+                                    fill="none">
+                                    <path
+                                        d="M73.4206 8.96749C71.5561 7.07562 69.3424 5.57486 66.9059 4.55094C64.4694 3.52701 61.8579 3 59.2206 3C56.5832 3 53.9717 3.52701 51.5352 4.55094C49.0988 5.57486 46.8851 7.07562 45.0206 8.96749L41.1512 12.8919L37.2818 8.96749C33.5157 5.14784 28.4078 3.00198 23.0818 3.00198C17.7558 3.00198 12.6479 5.14784 8.88183 8.96749C5.11576 12.7871 3 17.9677 3 23.3695C3 28.7713 5.11576 33.9519 8.88183 37.7715L12.7512 41.696L41.1512 70.5L69.5512 41.696L73.4206 37.7715C75.2859 35.8805 76.7656 33.6353 77.7752 31.1642C78.7847 28.693 79.3043 26.0444 79.3043 23.3695C79.3043 20.6946 78.7847 18.046 77.7752 15.5748C76.7656 13.1037 75.2859 10.8585 73.4206 8.96749Z"
+                                        stroke="#3A4736" stroke-width="4.73264" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
                             </div>
                         </div>
                         <div class="card_bottom">
@@ -201,7 +242,13 @@
                         <div class="card_top_2">
                             <a href="#" class="card_img"><img src="img/photo.jpg" alt="ficus_benjamina" /></a>
                             <div class="card_like">
-                                <a href="#"><img src="img/image_15.svg" alt="like" /></a>
+                               <svg class="like" xmlns="http://www.w3.org/2000/svg" width="82" height="73" viewBox="0 0 82 73"
+                                    fill="none">
+                                    <path
+                                        d="M73.4206 8.96749C71.5561 7.07562 69.3424 5.57486 66.9059 4.55094C64.4694 3.52701 61.8579 3 59.2206 3C56.5832 3 53.9717 3.52701 51.5352 4.55094C49.0988 5.57486 46.8851 7.07562 45.0206 8.96749L41.1512 12.8919L37.2818 8.96749C33.5157 5.14784 28.4078 3.00198 23.0818 3.00198C17.7558 3.00198 12.6479 5.14784 8.88183 8.96749C5.11576 12.7871 3 17.9677 3 23.3695C3 28.7713 5.11576 33.9519 8.88183 37.7715L12.7512 41.696L41.1512 70.5L69.5512 41.696L73.4206 37.7715C75.2859 35.8805 76.7656 33.6353 77.7752 31.1642C78.7847 28.693 79.3043 26.0444 79.3043 23.3695C79.3043 20.6946 78.7847 18.046 77.7752 15.5748C76.7656 13.1037 75.2859 10.8585 73.4206 8.96749Z"
+                                        stroke="#3A4736" stroke-width="4.73264" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
                             </div>
                         </div>
                         <div class="card_bottom">
@@ -214,7 +261,13 @@
                         <div class="card_top_2">
                             <a href="#" class="card_img"><img src="img/photo.jpg" alt="ficus_lyrata" /></a>
                             <div class="card_like">
-                                <a href="#"><img src="img/image_15.svg" alt="like" /></a>
+                               <svg class="like" xmlns="http://www.w3.org/2000/svg" width="82" height="73" viewBox="0 0 82 73"
+                                    fill="none">
+                                    <path
+                                        d="M73.4206 8.96749C71.5561 7.07562 69.3424 5.57486 66.9059 4.55094C64.4694 3.52701 61.8579 3 59.2206 3C56.5832 3 53.9717 3.52701 51.5352 4.55094C49.0988 5.57486 46.8851 7.07562 45.0206 8.96749L41.1512 12.8919L37.2818 8.96749C33.5157 5.14784 28.4078 3.00198 23.0818 3.00198C17.7558 3.00198 12.6479 5.14784 8.88183 8.96749C5.11576 12.7871 3 17.9677 3 23.3695C3 28.7713 5.11576 33.9519 8.88183 37.7715L12.7512 41.696L41.1512 70.5L69.5512 41.696L73.4206 37.7715C75.2859 35.8805 76.7656 33.6353 77.7752 31.1642C78.7847 28.693 79.3043 26.0444 79.3043 23.3695C79.3043 20.6946 78.7847 18.046 77.7752 15.5748C76.7656 13.1037 75.2859 10.8585 73.4206 8.96749Z"
+                                        stroke="#3A4736" stroke-width="4.73264" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
                             </div>
                         </div>
                         <div class="card_bottom">
@@ -225,7 +278,13 @@
                         <div class="card_top_2">
                             <a href="#" class="card_img"><img src="img/photo.jpg" alt="caryota" /></a>
                             <div class="card_like">
-                                <a href="#"><img src="img/image_15.svg" alt="like" /></a>
+                               <svg class="like" xmlns="http://www.w3.org/2000/svg" width="82" height="73" viewBox="0 0 82 73"
+                                    fill="none">
+                                    <path
+                                        d="M73.4206 8.96749C71.5561 7.07562 69.3424 5.57486 66.9059 4.55094C64.4694 3.52701 61.8579 3 59.2206 3C56.5832 3 53.9717 3.52701 51.5352 4.55094C49.0988 5.57486 46.8851 7.07562 45.0206 8.96749L41.1512 12.8919L37.2818 8.96749C33.5157 5.14784 28.4078 3.00198 23.0818 3.00198C17.7558 3.00198 12.6479 5.14784 8.88183 8.96749C5.11576 12.7871 3 17.9677 3 23.3695C3 28.7713 5.11576 33.9519 8.88183 37.7715L12.7512 41.696L41.1512 70.5L69.5512 41.696L73.4206 37.7715C75.2859 35.8805 76.7656 33.6353 77.7752 31.1642C78.7847 28.693 79.3043 26.0444 79.3043 23.3695C79.3043 20.6946 78.7847 18.046 77.7752 15.5748C76.7656 13.1037 75.2859 10.8585 73.4206 8.96749Z"
+                                        stroke="#3A4736" stroke-width="4.73264" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
                             </div>
                         </div>
                         <div class="card_bottom">
@@ -250,7 +309,13 @@
                         <div class="card_top_2">
                             <a href="#" class="card_img"><img src="img/photo.jpg" alt="dracaena_marginata" /></a>
                             <div class="card_like">
-                                <a href="#"><img src="img/image_15.svg" alt="like" /></a>
+                               <svg class="like" xmlns="http://www.w3.org/2000/svg" width="82" height="73" viewBox="0 0 82 73"
+                                    fill="none">
+                                    <path
+                                        d="M73.4206 8.96749C71.5561 7.07562 69.3424 5.57486 66.9059 4.55094C64.4694 3.52701 61.8579 3 59.2206 3C56.5832 3 53.9717 3.52701 51.5352 4.55094C49.0988 5.57486 46.8851 7.07562 45.0206 8.96749L41.1512 12.8919L37.2818 8.96749C33.5157 5.14784 28.4078 3.00198 23.0818 3.00198C17.7558 3.00198 12.6479 5.14784 8.88183 8.96749C5.11576 12.7871 3 17.9677 3 23.3695C3 28.7713 5.11576 33.9519 8.88183 37.7715L12.7512 41.696L41.1512 70.5L69.5512 41.696L73.4206 37.7715C75.2859 35.8805 76.7656 33.6353 77.7752 31.1642C78.7847 28.693 79.3043 26.0444 79.3043 23.3695C79.3043 20.6946 78.7847 18.046 77.7752 15.5748C76.7656 13.1037 75.2859 10.8585 73.4206 8.96749Z"
+                                        stroke="#3A4736" stroke-width="4.73264" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
                             </div>
                         </div>
                         <div class="card_bottom">
@@ -261,85 +326,127 @@
                         <div class="card_top_2">
                             <a href="#" class="card_img"><img src="img/photo.jpg" alt="camellia" /></a>
                             <div class="card_like">
-                                <a href="#"><img src="img/image_15.svg" alt="like" /></a>
+                               <svg class="like" xmlns="http://www.w3.org/2000/svg" width="82" height="73" viewBox="0 0 82 73"
+                                    fill="none">
+                                    <path
+                                        d="M73.4206 8.96749C71.5561 7.07562 69.3424 5.57486 66.9059 4.55094C64.4694 3.52701 61.8579 3 59.2206 3C56.5832 3 53.9717 3.52701 51.5352 4.55094C49.0988 5.57486 46.8851 7.07562 45.0206 8.96749L41.1512 12.8919L37.2818 8.96749C33.5157 5.14784 28.4078 3.00198 23.0818 3.00198C17.7558 3.00198 12.6479 5.14784 8.88183 8.96749C5.11576 12.7871 3 17.9677 3 23.3695C3 28.7713 5.11576 33.9519 8.88183 37.7715L12.7512 41.696L41.1512 70.5L69.5512 41.696L73.4206 37.7715C75.2859 35.8805 76.7656 33.6353 77.7752 31.1642C78.7847 28.693 79.3043 26.0444 79.3043 23.3695C79.3043 20.6946 78.7847 18.046 77.7752 15.5748C76.7656 13.1037 75.2859 10.8585 73.4206 8.96749Z"
+                                        stroke="#3A4736" stroke-width="4.73264" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
                             </div>
                         </div>
                         <div class="card_bottom">
                             <a href="#" class="card_link">Камелия (Camellia)</a>
                         </div>
-                </div>
-            </div>
-                <div class="two_cards">
-                    <div class="card card card_var_2">
-                    <div class="card_top_2">
-                        <a href="#" class="card_img"><img src="img/photo.jpg" alt="aloe" /></a>
-                        <div class="card_like">
-                            <a href="#"><img src="img/image_15.svg" alt="like" /></a>
-                        </div>
                     </div>
-                    <div class="card_bottom">
-                        <a href="#" class="card_link">Алоэ (Aloe)</a>
-                    </div>
-                </div>
-                <div class="card card card_var_1">
-                    <div class="card_top_1">
-                        <a href="#" class="card_img"><img src="img/photo.jpg" alt="citrus" /></a>
-                        <div class="card_like">
-                            <a href="#"><img src="img/image_15.svg" alt="like" /></a>
-                        </div>
-                    </div>
-                    <div class="card_bottom">
-                        <a href="#" class="card_link">Лимон (Citrus)</a>
-                    </div>
-                </div>
                 </div>
                 <div class="two_cards">
                     <div class="card card card_var_2">
-                    <div class="card_top_2">
-                        <a href="#" class="card_img"><img src="img/photo.jpg" alt="saintpaulia" /></a>
-                        <div class="card_like">
-                            <a href="#"><img src="img/image_15.svg" alt="like" /></a>
+                        <div class="card_top_2">
+                            <a href="#" class="card_img"><img src="img/photo.jpg" alt="aloe" /></a>
+                            <div class="card_like">
+                               <svg class="like" xmlns="http://www.w3.org/2000/svg" width="82" height="73" viewBox="0 0 82 73"
+                                    fill="none">
+                                    <path
+                                        d="M73.4206 8.96749C71.5561 7.07562 69.3424 5.57486 66.9059 4.55094C64.4694 3.52701 61.8579 3 59.2206 3C56.5832 3 53.9717 3.52701 51.5352 4.55094C49.0988 5.57486 46.8851 7.07562 45.0206 8.96749L41.1512 12.8919L37.2818 8.96749C33.5157 5.14784 28.4078 3.00198 23.0818 3.00198C17.7558 3.00198 12.6479 5.14784 8.88183 8.96749C5.11576 12.7871 3 17.9677 3 23.3695C3 28.7713 5.11576 33.9519 8.88183 37.7715L12.7512 41.696L41.1512 70.5L69.5512 41.696L73.4206 37.7715C75.2859 35.8805 76.7656 33.6353 77.7752 31.1642C78.7847 28.693 79.3043 26.0444 79.3043 23.3695C79.3043 20.6946 78.7847 18.046 77.7752 15.5748C76.7656 13.1037 75.2859 10.8585 73.4206 8.96749Z"
+                                        stroke="#3A4736" stroke-width="4.73264" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="card_bottom">
+                            <a href="#" class="card_link">Алоэ (Aloe)</a>
                         </div>
                     </div>
-                    <div class="card_bottom">
-                        <a href="#" class="card_link">Сенполия фиалка (Saintpaulia)</a>
-                    </div>
-                </div>
-                <div class="card card card_var_2">
-                    <div class="card_top_2">
-                        <a href="#" class="card_img"><img src="img/photo.jpg" alt="zamioculcas" /></a>
-                        <div class="card_like">
-                            <a href="#"><img src="img/image_15.svg" alt="like" /></a>
+                    <div class="card card card_var_1">
+                        <div class="card_top_1">
+                            <a href="#" class="card_img"><img src="img/photo.jpg" alt="citrus" /></a>
+                            <div class="card_like">
+                               <svg class="like" xmlns="http://www.w3.org/2000/svg" width="82" height="73" viewBox="0 0 82 73"
+                                    fill="none">
+                                    <path
+                                        d="M73.4206 8.96749C71.5561 7.07562 69.3424 5.57486 66.9059 4.55094C64.4694 3.52701 61.8579 3 59.2206 3C56.5832 3 53.9717 3.52701 51.5352 4.55094C49.0988 5.57486 46.8851 7.07562 45.0206 8.96749L41.1512 12.8919L37.2818 8.96749C33.5157 5.14784 28.4078 3.00198 23.0818 3.00198C17.7558 3.00198 12.6479 5.14784 8.88183 8.96749C5.11576 12.7871 3 17.9677 3 23.3695C3 28.7713 5.11576 33.9519 8.88183 37.7715L12.7512 41.696L41.1512 70.5L69.5512 41.696L73.4206 37.7715C75.2859 35.8805 76.7656 33.6353 77.7752 31.1642C78.7847 28.693 79.3043 26.0444 79.3043 23.3695C79.3043 20.6946 78.7847 18.046 77.7752 15.5748C76.7656 13.1037 75.2859 10.8585 73.4206 8.96749Z"
+                                        stroke="#3A4736" stroke-width="4.73264" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="card_bottom">
+                            <a href="#" class="card_link">Лимон (Citrus)</a>
                         </div>
                     </div>
-                    <div class="card_bottom">
-                        <a href="#" class="card_link">Замиокулькас (Zamioculcas)</a>
-                    </div>
                 </div>
+                <div class="two_cards">
+                    <div class="card card card_var_2">
+                        <div class="card_top_2">
+                            <a href="#" class="card_img"><img src="img/photo.jpg" alt="saintpaulia" /></a>
+                            <div class="card_like">
+                               <svg class="like" xmlns="http://www.w3.org/2000/svg" width="82" height="73" viewBox="0 0 82 73"
+                                    fill="none">
+                                    <path
+                                        d="M73.4206 8.96749C71.5561 7.07562 69.3424 5.57486 66.9059 4.55094C64.4694 3.52701 61.8579 3 59.2206 3C56.5832 3 53.9717 3.52701 51.5352 4.55094C49.0988 5.57486 46.8851 7.07562 45.0206 8.96749L41.1512 12.8919L37.2818 8.96749C33.5157 5.14784 28.4078 3.00198 23.0818 3.00198C17.7558 3.00198 12.6479 5.14784 8.88183 8.96749C5.11576 12.7871 3 17.9677 3 23.3695C3 28.7713 5.11576 33.9519 8.88183 37.7715L12.7512 41.696L41.1512 70.5L69.5512 41.696L73.4206 37.7715C75.2859 35.8805 76.7656 33.6353 77.7752 31.1642C78.7847 28.693 79.3043 26.0444 79.3043 23.3695C79.3043 20.6946 78.7847 18.046 77.7752 15.5748C76.7656 13.1037 75.2859 10.8585 73.4206 8.96749Z"
+                                        stroke="#3A4736" stroke-width="4.73264" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="card_bottom">
+                            <a href="#" class="card_link">Сенполия фиалка (Saintpaulia)</a>
+                        </div>
+                    </div>
+                    <div class="card card card_var_2">
+                        <div class="card_top_2">
+                            <a href="#" class="card_img"><img src="img/photo.jpg" alt="zamioculcas" /></a>
+                            <div class="card_like">
+                               <svg class="like" xmlns="http://www.w3.org/2000/svg" width="82" height="73" viewBox="0 0 82 73"
+                                    fill="none">
+                                    <path
+                                        d="M73.4206 8.96749C71.5561 7.07562 69.3424 5.57486 66.9059 4.55094C64.4694 3.52701 61.8579 3 59.2206 3C56.5832 3 53.9717 3.52701 51.5352 4.55094C49.0988 5.57486 46.8851 7.07562 45.0206 8.96749L41.1512 12.8919L37.2818 8.96749C33.5157 5.14784 28.4078 3.00198 23.0818 3.00198C17.7558 3.00198 12.6479 5.14784 8.88183 8.96749C5.11576 12.7871 3 17.9677 3 23.3695C3 28.7713 5.11576 33.9519 8.88183 37.7715L12.7512 41.696L41.1512 70.5L69.5512 41.696L73.4206 37.7715C75.2859 35.8805 76.7656 33.6353 77.7752 31.1642C78.7847 28.693 79.3043 26.0444 79.3043 23.3695C79.3043 20.6946 78.7847 18.046 77.7752 15.5748C76.7656 13.1037 75.2859 10.8585 73.4206 8.96749Z"
+                                        stroke="#3A4736" stroke-width="4.73264" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="card_bottom">
+                            <a href="#" class="card_link">Замиокулькас (Zamioculcas)</a>
+                        </div>
+                    </div>
                 </div>
                 <div class="two_cards">
                     <div class="card card_var_2">
-                    <div class="card_top_2">
-                        <a href="#" class="card_img"><img src="img/photo.jpg" alt="azalea" /></a>
-                        <div class="card_like">
-                            <a href="#"><img src="img/image_15.svg" alt="like" /></a>
+                        <div class="card_top_2">
+                            <a href="#" class="card_img"><img src="img/photo.jpg" alt="azalea" /></a>
+                            <div class="card_like">
+                               <svg class="like" xmlns="http://www.w3.org/2000/svg" width="82" height="73" viewBox="0 0 82 73"
+                                    fill="none">
+                                    <path
+                                        d="M73.4206 8.96749C71.5561 7.07562 69.3424 5.57486 66.9059 4.55094C64.4694 3.52701 61.8579 3 59.2206 3C56.5832 3 53.9717 3.52701 51.5352 4.55094C49.0988 5.57486 46.8851 7.07562 45.0206 8.96749L41.1512 12.8919L37.2818 8.96749C33.5157 5.14784 28.4078 3.00198 23.0818 3.00198C17.7558 3.00198 12.6479 5.14784 8.88183 8.96749C5.11576 12.7871 3 17.9677 3 23.3695C3 28.7713 5.11576 33.9519 8.88183 37.7715L12.7512 41.696L41.1512 70.5L69.5512 41.696L73.4206 37.7715C75.2859 35.8805 76.7656 33.6353 77.7752 31.1642C78.7847 28.693 79.3043 26.0444 79.3043 23.3695C79.3043 20.6946 78.7847 18.046 77.7752 15.5748C76.7656 13.1037 75.2859 10.8585 73.4206 8.96749Z"
+                                        stroke="#3A4736" stroke-width="4.73264" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="card_bottom">
+                            <a href="#" class="card_link">Азалия (Azalea)</a>
                         </div>
                     </div>
-                    <div class="card_bottom">
-                        <a href="#" class="card_link">Азалия (Azalea)</a>
-                    </div>
-                </div> 
-                <div class="card card_var_1">
-                    <div class="card_top_1">
-                        <a href="#" class="card_img"><img src="img/photo.jpg" alt="bromelia" /></a>
-                        <div class="card_like">
-                            <a href="#"><img src="img/image_15.svg" alt="like" /></a>
+                    <div class="card card_var_1">
+                        <div class="card_top_1">
+                            <a href="#" class="card_img"><img src="img/photo.jpg" alt="bromelia" /></a>
+                            <div class="card_like">
+                               <svg class="like" xmlns="http://www.w3.org/2000/svg" width="82" height="73" viewBox="0 0 82 73"
+                                    fill="none">
+                                    <path
+                                        d="M73.4206 8.96749C71.5561 7.07562 69.3424 5.57486 66.9059 4.55094C64.4694 3.52701 61.8579 3 59.2206 3C56.5832 3 53.9717 3.52701 51.5352 4.55094C49.0988 5.57486 46.8851 7.07562 45.0206 8.96749L41.1512 12.8919L37.2818 8.96749C33.5157 5.14784 28.4078 3.00198 23.0818 3.00198C17.7558 3.00198 12.6479 5.14784 8.88183 8.96749C5.11576 12.7871 3 17.9677 3 23.3695C3 28.7713 5.11576 33.9519 8.88183 37.7715L12.7512 41.696L41.1512 70.5L69.5512 41.696L73.4206 37.7715C75.2859 35.8805 76.7656 33.6353 77.7752 31.1642C78.7847 28.693 79.3043 26.0444 79.3043 23.3695C79.3043 20.6946 78.7847 18.046 77.7752 15.5748C76.7656 13.1037 75.2859 10.8585 73.4206 8.96749Z"
+                                        stroke="#3A4736" stroke-width="4.73264" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="card_bottom">
+                            <a href="#" class="card_link">Бромелия (Bromelia)</a>
                         </div>
                     </div>
-                    <div class="card_bottom">
-                        <a href="#" class="card_link">Бромелия (Bromelia)</a>
-                    </div>
-                </div>
                 </div>
             </div>
         </section>
@@ -353,44 +460,72 @@
                         <div class="last_view_card_top">
                             <a href="#" class="card_img"><img src="img/photo.jpg" alt="img" /></a>
                             <div class="card_like">
-                                <a href="#"><img src="img/image_15.svg" alt="like" /></a>
+                               <svg class="like" xmlns="http://www.w3.org/2000/svg" width="82" height="73" viewBox="0 0 82 73"
+                                    fill="none">
+                                    <path
+                                        d="M73.4206 8.96749C71.5561 7.07562 69.3424 5.57486 66.9059 4.55094C64.4694 3.52701 61.8579 3 59.2206 3C56.5832 3 53.9717 3.52701 51.5352 4.55094C49.0988 5.57486 46.8851 7.07562 45.0206 8.96749L41.1512 12.8919L37.2818 8.96749C33.5157 5.14784 28.4078 3.00198 23.0818 3.00198C17.7558 3.00198 12.6479 5.14784 8.88183 8.96749C5.11576 12.7871 3 17.9677 3 23.3695C3 28.7713 5.11576 33.9519 8.88183 37.7715L12.7512 41.696L41.1512 70.5L69.5512 41.696L73.4206 37.7715C75.2859 35.8805 76.7656 33.6353 77.7752 31.1642C78.7847 28.693 79.3043 26.0444 79.3043 23.3695C79.3043 20.6946 78.7847 18.046 77.7752 15.5748C76.7656 13.1037 75.2859 10.8585 73.4206 8.96749Z"
+                                        stroke="#3A4736" stroke-width="4.73264" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
                             </div>
                         </div>
                         <div class="last_view_card_bottom">
-                            <a href="#" class="card_link last_view_card_link    ">Какие растения разместить на стеллаже?</a>
+                            <a href="#" class="card_link last_view_card_link    ">Какие растения разместить на
+                                стеллаже?</a>
                         </div>
                     </div>
                     <div class="last_view_card">
                         <div class="last_view_card_top">
                             <a href="#" class="card_img"><img src="img/photo.jpg" alt="img" /></a>
                             <div class="card_like">
-                                <a href="#"><img src="img/image_15.svg" alt="like" /></a>
+                               <svg class="like" xmlns="http://www.w3.org/2000/svg" width="82" height="73" viewBox="0 0 82 73"
+                                    fill="none">
+                                    <path
+                                        d="M73.4206 8.96749C71.5561 7.07562 69.3424 5.57486 66.9059 4.55094C64.4694 3.52701 61.8579 3 59.2206 3C56.5832 3 53.9717 3.52701 51.5352 4.55094C49.0988 5.57486 46.8851 7.07562 45.0206 8.96749L41.1512 12.8919L37.2818 8.96749C33.5157 5.14784 28.4078 3.00198 23.0818 3.00198C17.7558 3.00198 12.6479 5.14784 8.88183 8.96749C5.11576 12.7871 3 17.9677 3 23.3695C3 28.7713 5.11576 33.9519 8.88183 37.7715L12.7512 41.696L41.1512 70.5L69.5512 41.696L73.4206 37.7715C75.2859 35.8805 76.7656 33.6353 77.7752 31.1642C78.7847 28.693 79.3043 26.0444 79.3043 23.3695C79.3043 20.6946 78.7847 18.046 77.7752 15.5748C76.7656 13.1037 75.2859 10.8585 73.4206 8.96749Z"
+                                        stroke="#3A4736" stroke-width="4.73264" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
                             </div>
                         </div>
                         <div class="last_view_card_bottom">
-                            <a href="#" class="card_link last_view_card_link">7 комнатных растений, которые выживут в офисе</a>
+                            <a href="#" class="card_link last_view_card_link">7 комнатных растений, которые выживут в
+                                офисе</a>
                         </div>
                     </div>
                     <div class="last_view_card">
                         <div class="last_view_card_top">
                             <a href="#" class="card_img"><img src="img/photo.jpg" alt="img" /></a>
                             <div class="card_like">
-                                <a href="#"><img src="img/image_15.svg" alt="like" /></a>
+                               <svg class="like" xmlns="http://www.w3.org/2000/svg" width="82" height="73" viewBox="0 0 82 73"
+                                    fill="none">
+                                    <path
+                                        d="M73.4206 8.96749C71.5561 7.07562 69.3424 5.57486 66.9059 4.55094C64.4694 3.52701 61.8579 3 59.2206 3C56.5832 3 53.9717 3.52701 51.5352 4.55094C49.0988 5.57486 46.8851 7.07562 45.0206 8.96749L41.1512 12.8919L37.2818 8.96749C33.5157 5.14784 28.4078 3.00198 23.0818 3.00198C17.7558 3.00198 12.6479 5.14784 8.88183 8.96749C5.11576 12.7871 3 17.9677 3 23.3695C3 28.7713 5.11576 33.9519 8.88183 37.7715L12.7512 41.696L41.1512 70.5L69.5512 41.696L73.4206 37.7715C75.2859 35.8805 76.7656 33.6353 77.7752 31.1642C78.7847 28.693 79.3043 26.0444 79.3043 23.3695C79.3043 20.6946 78.7847 18.046 77.7752 15.5748C76.7656 13.1037 75.2859 10.8585 73.4206 8.96749Z"
+                                        stroke="#3A4736" stroke-width="4.73264" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
                             </div>
                         </div>
                         <div class="last_view_card_bottom">
-                            <a href="#" class="card_link last_view_card_link">6 комнатных цветов идеальных для подарка</a>
+                            <a href="#" class="card_link last_view_card_link">6 комнатных цветов идеальных для
+                                подарка</a>
                         </div>
                     </div>
                     <div class="last_view_card">
                         <div class="last_view_card_top">
                             <a href="#" class="card_img"><img src="img/photo.jpg" alt="img" /></a>
                             <div class="card_like">
-                                <a href="#"><img src="img/image_15.svg" alt="like" /></a>
+                               <svg class="like" xmlns="http://www.w3.org/2000/svg" width="82" height="73" viewBox="0 0 82 73"
+                                    fill="none">
+                                    <path
+                                        d="M73.4206 8.96749C71.5561 7.07562 69.3424 5.57486 66.9059 4.55094C64.4694 3.52701 61.8579 3 59.2206 3C56.5832 3 53.9717 3.52701 51.5352 4.55094C49.0988 5.57486 46.8851 7.07562 45.0206 8.96749L41.1512 12.8919L37.2818 8.96749C33.5157 5.14784 28.4078 3.00198 23.0818 3.00198C17.7558 3.00198 12.6479 5.14784 8.88183 8.96749C5.11576 12.7871 3 17.9677 3 23.3695C3 28.7713 5.11576 33.9519 8.88183 37.7715L12.7512 41.696L41.1512 70.5L69.5512 41.696L73.4206 37.7715C75.2859 35.8805 76.7656 33.6353 77.7752 31.1642C78.7847 28.693 79.3043 26.0444 79.3043 23.3695C79.3043 20.6946 78.7847 18.046 77.7752 15.5748C76.7656 13.1037 75.2859 10.8585 73.4206 8.96749Z"
+                                        stroke="#3A4736" stroke-width="4.73264" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
                             </div>
                         </div>
                         <div class="last_view_card_bottom">
-                            <a href="#" class="card_link last_view_card_link">5 признаков того, что вашим комнатным растениям нужна свежая почва</a>
+                            <a href="#" class="card_link last_view_card_link">5 признаков того, что вашим комнатным
+                                растениям нужна свежая почва</a>
                         </div>
                     </div>
                 </div>
@@ -487,6 +622,7 @@
             </div>
         </div>
     </footer>
+    <script src="close_button.js"></script>
 </body>
 
 </html>
