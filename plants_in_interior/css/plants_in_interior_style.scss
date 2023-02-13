@@ -28,6 +28,7 @@ $border-width: 1px;
 $border: $border-width solid $border-color;
 $border-transparent: $border-width solid transparent;
 $border-radius: 6px;
+$border-radius-circle: 10px;
 
 $text-decoration: none;
 
@@ -167,7 +168,6 @@ main{
 }
 
 .wrapper-calendar{
-    // border-bottom: $border;
     background-color: $background-color-calendar;
 }
 
@@ -188,8 +188,6 @@ main{
     cursor: pointer;
 }
 
-
-
 .action-title{
     font-weight: 500;
     color: $title-color;
@@ -206,14 +204,15 @@ main{
     text-align: center;
     padding-top: $padding-link - 7px;
     margin-right: 82px;
-    box-shadow: 4px 4px 9px 1px rgba(135, 149, 126, 0.73);}
+    box-shadow: 4px 4px 9px 1px rgba(135, 149, 126, 0.73);
+}
+
 
 // SECTION SELECTION
 .wrapper-selection{
     border-bottom: $border;
     border-top: $border;
     background-color: $green-color;
-    margin-bottom: $common-padding + 10px;
 }
 .selection{
     color: $font-color;
@@ -233,18 +232,28 @@ main{
 //SECTION PHOTOCARDS
 .photocards{
     display: flex;
-    flex-direction: column;
-    gap: $common-padding + 30px;
+    flex-wrap: wrap;
+    padding: 0 218px;
+    justify-content: space-between;
     margin-bottom: $common-padding + 10px;
 }
 
 .card{
+    display: flex;
     position: relative;
     border-radius: $border-radius;
     align-self: center;
-    width: 1210px;
-    height: 932px;
-    // cursor: pointer;
+    width: 450px;
+    height: 450px;
+    cursor: pointer;
+}
+
+.card:nth-child(2n){
+    margin-top: 80px;
+}
+
+.card:last-child{
+    margin-top: 50px;
 }
 
 
@@ -253,15 +262,14 @@ main{
     z-index: 1;
     border: $border;
     border-radius: $border-radius;
-    width: 1210px;
-    height: 932px;
+    width: 450px;
 }
-
 
 .card-button{
     z-index: 2;
     position: absolute;
     display: none;
+    // visibility: hidden;
     width: 200px;
     height: 60px;
     background-color: $card-button-color;
@@ -272,10 +280,23 @@ main{
     padding-top: 20px;
 }
 
-.card-button-like{
-    z-index: 2;
-    position: absolute;
+.card-button-circle{
+    content: "";
     display: none;
+    position: absolute;
+    z-index: 2;
+    width: 18px;
+    height: 18px;
+
+    background: $card-button-color;
+    box-shadow: 2px 2px 8px 1px rgba(135, 149, 126, 0.95);
+    border-radius: $border-radius-circle;
+}
+
+.card-button-like{
+    z-index: 4;
+    position: absolute;
+    // display: none;
     padding: 6px;
     width: 43px;
     height: 41px;
@@ -293,22 +314,22 @@ main{
 
 
 //FIRST CARD
-// .card:first-child .card-button:nth-child(3){
+// .card:first-child .card-button-circle:nth-child(3){
 //     padding-top: 10px;
 // }
-// .card:first-child .card-button:first-child{
+// .card:first-child .card-button-circle:first-child{
 //     top: 22%;
 //     left: 40%;
 // }
-// .card:first-child .card-button:nth-child(2){
+// .card:first-child .card-button-circle:nth-child(2){
 //     top: 40%;
 //     right: 20%;
 // }
-// .card:first-child .card-button:nth-child(3){
+// .card:first-child .card-button-circle:nth-child(3){
 //     top: 45%;
 //     right: 1%;
 // }
-// .card:first-child .card-button:nth-child(4){
+// .card:first-child .card-button-circle:nth-child(4){
 //     top: 50%;
 //     left: 40%;
 // }
@@ -325,23 +346,23 @@ main{
 // }
 
 //THIRD CARD
-// .card:nth-child(3) .card-button:first-child{
-//     top: 12%;
-//     left: 43%;
-// }
-// .card:nth-child(3) .card-button:nth-child(2){
-//     top: 55%;
-//     left: 60%;
-// }
-// .card:nth-child(3) .card-button:nth-child(3){
-//     top: 35%;
-//     left: 30%;
-//     padding-top: 10px;
-// }
-// .card:nth-child(3) .card-button:nth-child(4){
-//     top: 30%;
-//     left: 5%;
-// }
+.card:first-child .card-button-circle:first-child{
+    top: 12%;
+    left: 43%;
+}
+.card:first-child .card-button-circle:nth-child(2){
+    top: 55%;
+    left: 60%;
+}
+.card:first-child .card-button-circle:nth-child(3){
+    top: 35%;
+    left: 30%;
+    padding-top: 10px;
+}
+.card:first-child .card-button-circle:nth-child(4){
+    top: 30%;
+    left: 5%;
+}
 //SECTION PHOTOCARDS BUTTONS
 .photocards-buttons{
     margin-bottom: 194px;

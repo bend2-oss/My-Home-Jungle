@@ -1,7 +1,15 @@
 $(document).ready(function(){
     $.getJSON("cards.json", function(data){
        
+        // console.log(data);
+        // let elements = data.map(element => element[key<=2])
+        // console.log(elements);
         $.each(data, function(key, card){
+
+            // console.log(key);
+            // while(key <= 2){
+            //     console.log('я тут');
+            // }
 
             //создаем новый элемент для карточки с фотографией, куда будем складывать все составляющие
             let cardImage = document.createElement('div')
@@ -22,17 +30,22 @@ $(document).ready(function(){
 
             $.each(card.buttons, function(index, btn){
 
+                let circle = document.createElement('div')
+                circle.className = "card-button-circle"
+                $(circle).css({
+                    'top': btn.top + '%',
+                    'left': btn.left + '%',
+                })
                 //создаем новый элемент для кнопки
-                let button = document.createElement('a')
+                let button = document.createElement('div')
                 button.className = "card-button"
-                button.setAttribute("href", "#")
                 button.textContent = btn.name
                 $(button).css({
                     'top': btn.top + '%',
                     'left': btn.left + '%',
                     'padding-top': btn.paddingTop + 'px'
                 })
-
+                buttonsContainer.append(circle)
                 buttonsContainer.append(button)
             })
 
