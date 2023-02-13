@@ -90,13 +90,23 @@ body::-webkit-scrollbar-track{
 }
 
 .header-main .header__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
 }
 
 .header-main .header__container .header__left-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 
@@ -110,6 +120,8 @@ body::-webkit-scrollbar-track{
 }
 
 .header-main .header__container .header__left-block .left-block__nav-head .nav-head__ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -130,7 +142,11 @@ body::-webkit-scrollbar-track{
     font-weight: 400;
     font-size: 20px;
     line-height: 20px;
+    -webkit-transition: -webkit-box-shadow 0.1s ease-out;
+    transition: -webkit-box-shadow 0.1s ease-out;
+    -o-transition: box-shadow 0.1s ease-out;
     transition: box-shadow 0.1s ease-out;
+    transition: box-shadow 0.1s ease-out, -webkit-box-shadow 0.1s ease-out;
     padding: 4px;
     border-radius: 6px;
 }
@@ -141,12 +157,20 @@ body::-webkit-scrollbar-track{
 }
 
 .header-main .header__container .header__right-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 
 .header-main .header__container .header__right-block .right-block__search-head {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     position: relative;
     margin-right: 20px;
@@ -165,6 +189,8 @@ body::-webkit-scrollbar-track{
     position: absolute;
     right: 0px;
     z-index: 12;
+    -webkit-transition: 0.7s;
+    -o-transition: 0.7s;
     transition: 0.7s;
 }
 
@@ -199,7 +225,11 @@ body::-webkit-scrollbar-track{
 }
 
 .header-main .header__container .header__right-block .right-block__btn-head {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 
@@ -399,9 +429,27 @@ img{
 
 }
 .menuConteiner a{
+    position: relative;
     font-size: 20px;
     line-height: 20px;
     color: #3A4736;
+}
+.menuConteiner a:after {
+	display: block;
+	position: absolute;
+	left: 0;
+	width: 0;
+	height: 1px;
+	background-color: #3A4736;
+	content: "";
+	-webkit-transition: width 0.2s;
+    -o-transition: width 0.2s;
+    transition: width 0.2s;
+}
+
+.menuConteiner a:hover:after,
+.menuConteiner a:focus:after {
+	width: 100%;
 }
 .textConteiner{
     position: relative;
@@ -461,7 +509,11 @@ img{
     border-radius: 6px;
 }
 .slider_imageInterier_block:hover{
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
     transform: scale(1.1);
+    -webkit-transition-duration: 0.6s;
+    -o-transition-duration: 0.6s;
     transition-duration: 0.6s;
 }
 
@@ -512,12 +564,6 @@ img{
     padding-left: 86px;
     margin-left: -36px;
 }
-/* .infoText{
-    position: relative;
-}
-.info{
-    position: absolute;
-} */
 .content_block_text{
     position: relative;
     padding: 120px 0 60px 50px;
@@ -569,9 +615,15 @@ footer {
   }
   
   .footer-navigation-pages {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; 
   }
   
   .footer-navigation-column {
@@ -597,9 +649,13 @@ footer {
   }
   .footer-navigation-user {
     margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-  }
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;   
+}
   .icon-vk{
     margin-right: 10px;
   }
@@ -609,9 +665,16 @@ footer {
     bottom: 50px;
     right: 44px;
     /* opacity: 0.5; */
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
-    align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+     align-items: center;
     display: none;
   }
   .arrowTop p{
@@ -625,5 +688,7 @@ footer {
   }
 
   .show {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
