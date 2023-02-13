@@ -16,7 +16,7 @@ $(document).on('mouseover', '.card', function(event){
         'transition':'1s'
     })
     buttons.children('.card-button').fadeIn()
-    buttons.children('.card-button-like').fadeIn()
+    // buttons.children('.card-button-like').fadeIn()
 })
 
 $(document).on('mouseout', '.card', function(event){
@@ -39,7 +39,7 @@ $(document).on('mouseout', '.card', function(event){
         'transition':'1s'
     })
     buttons.children('.card-button').fadeOut()
-    buttons.children('.card-button-like').fadeOut()
+    // buttons.children('.card-button-like').fadeOut()
 
 })
 

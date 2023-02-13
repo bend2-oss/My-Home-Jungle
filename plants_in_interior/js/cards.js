@@ -1,7 +1,15 @@
 $(document).ready(function(){
     $.getJSON("cards.json", function(data){
        
+        // console.log(data);
+        // let elements = data.map(element => element[key<=2])
+        // console.log(elements);
         $.each(data, function(key, card){
+
+            // console.log(key);
+            // while(key <= 2){
+            //     console.log('я тут');
+            // }
 
             //создаем новый элемент для карточки с фотографией, куда будем складывать все составляющие
             let cardImage = document.createElement('div')
@@ -21,11 +29,14 @@ $(document).ready(function(){
 
 
             $.each(card.buttons, function(index, btn){
+               
+                //создаем кружочки
+                let buttonCircle = document.createElement('div')
+                buttonCircle.className = "card-button-circle"
 
                 //создаем новый элемент для кнопки
-                let button = document.createElement('a')
+                let button = document.createElement('div')
                 button.className = "card-button"
-                button.setAttribute("href", "#")
                 button.textContent = btn.name
                 $(button).css({
                     'top': btn.top + '%',
@@ -33,6 +44,7 @@ $(document).ready(function(){
                     'padding-top': btn.paddingTop + 'px'
                 })
 
+                button.append(buttonCircle)
                 buttonsContainer.append(button)
             })
 
