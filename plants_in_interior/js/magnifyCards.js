@@ -1,6 +1,9 @@
 $(document).ready(function(){
     $(document).on('click', '.card', function(event){
+
         let target = event.target.parentElement
+        if(!(target.classList.contains("card"))) return
+        
         $('body').append('<div id="overlay"></div><div id="magnify"><div class="card">' +target.innerHTML+'</div></div>')
 
         $('#magnify').css({

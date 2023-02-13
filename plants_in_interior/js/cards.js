@@ -29,11 +29,13 @@ $(document).ready(function(){
 
 
             $.each(card.buttons, function(index, btn){
-               
-                //создаем кружочки
-                let buttonCircle = document.createElement('div')
-                buttonCircle.className = "card-button-circle"
 
+                let circle = document.createElement('div')
+                circle.className = "card-button-circle"
+                $(circle).css({
+                    'top': btn.top + '%',
+                    'left': btn.left + '%',
+                })
                 //создаем новый элемент для кнопки
                 let button = document.createElement('div')
                 button.className = "card-button"
@@ -43,8 +45,7 @@ $(document).ready(function(){
                     'left': btn.left + '%',
                     'padding-top': btn.paddingTop + 'px'
                 })
-
-                button.append(buttonCircle)
+                buttonsContainer.append(circle)
                 buttonsContainer.append(button)
             })
 

@@ -268,7 +268,7 @@ main{
 .card-button{
     z-index: 2;
     position: absolute;
-    // display: none;
+    display: none;
     // visibility: hidden;
     width: 200px;
     height: 60px;
@@ -282,6 +282,7 @@ main{
 
 .card-button-circle{
     content: "";
+    display: none;
     position: absolute;
     z-index: 2;
     width: 18px;

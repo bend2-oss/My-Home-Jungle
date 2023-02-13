@@ -12,10 +12,10 @@ $(document).on('mouseover', '.card', function(event){
 
     let buttons = $(this).children('.buttons-container')
     $(this).children('.card-image').css({
-        'filter':'brightness(40%)',
+        'filter':'brightness(60%)',
         'transition':'1s'
     })
-    buttons.children('.card-button').fadeIn()
+    buttons.children('.card-button-circle').fadeIn()
     // buttons.children('.card-button-like').fadeIn()
 })
 
@@ -38,7 +38,7 @@ $(document).on('mouseout', '.card', function(event){
         'filter':'brightness(100%)',
         'transition':'1s'
     })
-    buttons.children('.card-button').fadeOut()
+    buttons.children('.card-button-circle').fadeOut()
     // buttons.children('.card-button-like').fadeOut()
 
 })
