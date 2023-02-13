@@ -178,7 +178,6 @@ main {
   border-bottom: 1px solid #3A4736;
   border-top: 1px solid #3A4736;
   background-color: #87957E;
-  margin-bottom: 60px;
 }
 
 .selection {
@@ -197,17 +196,28 @@ main {
 
 .photocards {
   display: flex;
-  flex-direction: column;
-  gap: 80px;
+  flex-wrap: wrap;
+  padding: 0 218px;
+  justify-content: space-between;
   margin-bottom: 60px;
 }
 
 .card {
+  display: flex;
   position: relative;
   border-radius: 6px;
   align-self: center;
-  width: 1210px;
-  height: 932px;
+  width: 450px;
+  height: 450px;
+  cursor: pointer;
+}
+
+.card:nth-child(2n) {
+  margin-top: 80px;
+}
+
+.card:last-child {
+  margin-top: 50px;
 }
 
 .card-image {
@@ -215,14 +225,12 @@ main {
   z-index: 1;
   border: 1px solid #3A4736;
   border-radius: 6px;
-  width: 1210px;
-  height: 932px;
+  width: 450px;
 }
 
 .card-button {
   z-index: 2;
   position: absolute;
-  display: none;
   width: 200px;
   height: 60px;
   background-color: #fff;
@@ -233,10 +241,20 @@ main {
   padding-top: 20px;
 }
 
-.card-button-like {
-  z-index: 2;
+.card-button-circle {
+  content: "";
   position: absolute;
-  display: none;
+  z-index: 2;
+  width: 18px;
+  height: 18px;
+  background: #fff;
+  box-shadow: 2px 2px 8px 1px rgba(135, 149, 126, 0.95);
+  border-radius: 10px;
+}
+
+.card-button-like {
+  z-index: 4;
+  position: absolute;
   padding: 6px;
   width: 43px;
   height: 41px;
@@ -249,6 +267,27 @@ main {
 
 .card-button-like:hover .button-like-image path {
   stroke: #DD4646;
+}
+
+.card:first-child .card-button-circle:first-child {
+  top: 12%;
+  left: 43%;
+}
+
+.card:first-child .card-button-circle:nth-child(2) {
+  top: 55%;
+  left: 60%;
+}
+
+.card:first-child .card-button-circle:nth-child(3) {
+  top: 35%;
+  left: 30%;
+  padding-top: 10px;
+}
+
+.card:first-child .card-button-circle:nth-child(4) {
+  top: 30%;
+  left: 5%;
 }
 
 .photocards-buttons {
