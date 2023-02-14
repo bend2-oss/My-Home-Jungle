@@ -217,6 +217,20 @@ body
     &_space
         height: 242px
         background: #EDE1DE
+        &_text
+            max-width: $max-width
+            margin: $margin
+            height: 100%
+            display: flex
+            align-items: center
+            position: relative
+            p
+                position: relative
+                bottom: 50px
+                color: #3A4736
+                font-size: 32px
+                font-family: $font-family
+                font-weight: $font-weight
     &_cards
         position: relative
         background: #87957E
@@ -259,8 +273,24 @@ body
     margin-top: 40px
     border-top: 3px solid #3A4736
 
-.pagination
-    height: 100px
+.show_more
+    margin-top: 110px
+    margin-bottom: 120px
+    display: flex
+    justify-content: center
+    &_btn
+        width: 590px
+        font-family: $font-family
+        font-size: 20px
+        font-weight: $font-weight
+        font-style: $font-style
+        line-height: 20px
+        padding: 4px 0
+        color: #FFF
+        background: #87957E
+        border: 1px solid #3A4736
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+        border-radius: 4px
 
 *,
 *:before,
