@@ -129,6 +129,8 @@ body {
 .class_plants {
   background: #87957E;
   height: 250px;
+  border: 1px solid #3A4736;
+  border-radius: 6px;
 }
 .class_plants_wrap {
   margin: 0 auto;
@@ -192,13 +194,13 @@ body {
 
 .cards_sec {
   background: #EDE1DE;
-  height: 800px;
+  height: 808px;
 }
 
 .cards_1 {
   position: relative;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   margin: 0 auto;
   width: 1210px;
   bottom: 40px;
@@ -206,7 +208,7 @@ body {
 .cards_2 {
   position: relative;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: flex-end;
   margin: 0 auto;
   width: 1210px;
@@ -218,6 +220,9 @@ body {
   background: #87957E;
   display: flex;
   align-items: center;
+  border: 1px solid #3A4736;
+  border-radius: 6px;
+  text-align: center;
 }
 .space_text p {
   margin: 0 auto;
@@ -233,7 +238,7 @@ body {
 .two_cards {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 50px;
 }
 
 .last_view_space {
@@ -244,6 +249,8 @@ body {
   position: relative;
   background: #87957E;
   height: 120px;
+  border: 1px solid #3A4736;
+  border-radius: 6px;
 }
 .last_view_cards_posing {
   position: relative;
