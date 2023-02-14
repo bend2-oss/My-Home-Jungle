@@ -1,6 +1,6 @@
 // WIDTH OF BLOCKS
 $width-body: 100%;
-$width-site: 1440px;
+$width-site: 1210px;
 $width-button: 190px;
 $height-button: 35px;
 
@@ -72,95 +72,6 @@ ul{
     margin: 0 auto;
 }
 
-// HEADER
-header{
-    position: sticky;
-    top: 0;
-    z-index: 3;
-   background-color: $background-color-site;
-}
-.header-navigation{
-    display: flex;
-    justify-content: space-between;
-    padding: $padding-link + 1 $common-padding * 2 + 15px;
-}
-
-.header-logo{
-    width: 111px;
-    height: 60px;
-    display: block;
-    background: url("../img/header_logo.svg") no-repeat;
-}
-
-
-.icon-heart{
-    width: 26px;
-    height: 23px;
-    display: block;
-    background: url("../img/favourites_icon.svg") no-repeat;
-}
-
-.icon-user{
-    width: 26px;
-    height: 26px;
-    display: block;
-    background: url("../img/user_icon.svg") no-repeat;
-}
-.navigation-pages, .navigation-user{
-    display: flex;
-    align-items: center;
-}
-
-
-.navigation-pages{
-    gap: $common-padding - 10px;
-}
-
-.navigation-user{
-    gap: $padding-link + 6px;
-}
-
-.navigation-item{
-    padding: 4px;
-    border: $border-transparent;
-    border-radius: $border-radius;
-}
-
-.navigation-link{
-    color: $title-color;
-}
-
-
-.navigation-item-search{
-    position: relative;
-    padding: 5px 0 0 8px;
-    width: $common-padding * 2 + 76px;
-    height: $common-padding - 10px;
-    border: $border;
-    border-radius: $border-radius;
-}
-
-.header-search{
-    font-family: 'Raleway', sans-serif;
-    border: none;
-    outline: none;
-    color: $title-color;
-    width: $common-padding * 2 + 36px;
-    height: $padding-link;
-    background-color: $background-color-site;
-}
-.header-search::placeholder{
-    color: $green-color;
-}
-
-.navigation-item-search::after{
-    content: "";
-    position: absolute;
-    width: 18px;
-    height: 18px;
-    top: 8px;
-    background: url(../img/search_icon.svg) no-repeat;
-}
 
 /* SECTION CALENDAR */
 main{
@@ -176,7 +87,7 @@ main{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: $common-padding / 2 - 5px $common-padding * 2 + 15px;
+    padding: $common-padding / 2 - 5px 0;
 }
 
 .calendar-button-close{
@@ -216,7 +127,7 @@ main{
 }
 .selection{
     color: $font-color;
-    padding: $common-padding - 20px $common-padding * 2 + 15px $padding-link + 10px;
+    padding: $common-padding - 20px 0 $padding-link + 10px;
 }
 
 .selection-title{
@@ -233,7 +144,7 @@ main{
 .photocards{
     display: flex;
     flex-wrap: wrap;
-    padding: 0 218px;
+    // padding: 0 218px;
     justify-content: space-between;
     margin-bottom: $common-padding + 10px;
 }
@@ -423,67 +334,4 @@ main{
     margin: 0 auto $common-padding * 2;
     width: $common-padding * 10;
     border-top: 4px solid $border-color;
-}
-// FOOTER
-footer{
-    background-color: $footer-color;
-    height: fit-content;
-}
-.footer-navigation{
-    padding: $common-padding + 20px $common-padding * 2 + 15px;
-    display: flex;
-    justify-content: space-between;
-}
-.footer-logo{
-    width: 180px;
-    height: 101px;
-    display: block;
-    background: url("../img/footer_logo.svg") no-repeat;
-}
-
-.footer-navigation-pages{
-    display: flex;
-    gap: 30px;
-}
-
-.footer-navigation-column{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.navigation-column-link{
-    color: $background-color-site;
-    display: block;
-}
-
-.footer-navigation-user{
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.footer-icon{
-    display: block;
-}
-
-.icon-mail{
-    width: 41px;
-    height: 33px;
-    background: url("../img/mail_icon.svg") no-repeat;
-}
-.icon-telegram{
-    width: 42px;
-    height: 34px;
-    background: url("../img/telegram_icon.svg") no-repeat;
-}
-.icon-whatsapp{
-    width: 33px;
-    height: 33px;
-    background: url("../img/whatsapp_icon.svg") no-repeat;
-}
-.icon-vk{
-   width: 46px;
-   height: 33px;
-    background: url("../img/vk_icon.svg") no-repeat;
 }

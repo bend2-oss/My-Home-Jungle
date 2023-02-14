@@ -32,101 +32,8 @@ ul {
 }
 
 .container {
-  max-width: 1440px;
+  max-width: 1210px;
   margin: 0 auto;
-}
-
-header {
-  position: sticky;
-  top: 0;
-  z-index: 3;
-  background-color: #EDE1DE;
-}
-
-.header-navigation {
-  display: flex;
-  justify-content: space-between;
-  padding: 15px 115px;
-}
-
-.header-logo {
-  width: 111px;
-  height: 60px;
-  display: block;
-  background: url("../img/header_logo.svg") no-repeat;
-}
-
-.icon-heart {
-  width: 26px;
-  height: 23px;
-  display: block;
-  background: url("../img/favourites_icon.svg") no-repeat;
-}
-
-.icon-user {
-  width: 26px;
-  height: 26px;
-  display: block;
-  background: url("../img/user_icon.svg") no-repeat;
-}
-
-.navigation-pages, .navigation-user {
-  display: flex;
-  align-items: center;
-}
-
-.navigation-pages {
-  gap: 40px;
-}
-
-.navigation-user {
-  gap: 20px;
-}
-
-.navigation-item {
-  padding: 4px;
-  border: 1px solid transparent;
-  border-radius: 6px;
-}
-
-.navigation-link {
-  color: #3A4736;
-}
-
-.navigation-item-search {
-  position: relative;
-  padding: 5px 0 0 8px;
-  width: 176px;
-  height: 40px;
-  border: 1px solid #3A4736;
-  border-radius: 6px;
-}
-
-.header-search {
-  font-family: "Raleway", sans-serif;
-  border: none;
-  outline: none;
-  color: #3A4736;
-  width: 136px;
-  height: 14px;
-  background-color: #EDE1DE;
-}
-
-.header-search::-moz-placeholder {
-  color: #87957E;
-}
-
-.header-search::placeholder {
-  color: #87957E;
-}
-
-.navigation-item-search::after {
-  content: "";
-  position: absolute;
-  width: 18px;
-  height: 18px;
-  top: 8px;
-  background: url(../img/search_icon.svg) no-repeat;
 }
 
 /* SECTION CALENDAR */
@@ -143,7 +50,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 115px;
+  padding: 20px 0;
 }
 
 .calendar-button-close {
@@ -182,7 +89,7 @@ main {
 
 .selection {
   color: #EEE4E2;
-  padding: 30px 115px 24px;
+  padding: 30px 0 24px;
 }
 
 .selection-title {
@@ -197,7 +104,6 @@ main {
 .photocards {
   display: flex;
   flex-wrap: wrap;
-  padding: 0 218px;
   justify-content: space-between;
   margin-bottom: 60px;
 }
@@ -351,73 +257,4 @@ main {
   margin: 0 auto 100px;
   width: 500px;
   border-top: 4px solid #3A4736;
-}
-
-footer {
-  background-color: #525D4D;
-  height: -moz-fit-content;
-  height: fit-content;
-}
-
-.footer-navigation {
-  padding: 70px 115px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.footer-logo {
-  width: 180px;
-  height: 101px;
-  display: block;
-  background: url("../img/footer_logo.svg") no-repeat;
-}
-
-.footer-navigation-pages {
-  display: flex;
-  gap: 30px;
-}
-
-.footer-navigation-column {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.navigation-column-link {
-  color: #EDE1DE;
-  display: block;
-}
-
-.footer-navigation-user {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.footer-icon {
-  display: block;
-}
-
-.icon-mail {
-  width: 41px;
-  height: 33px;
-  background: url("../img/mail_icon.svg") no-repeat;
-}
-
-.icon-telegram {
-  width: 42px;
-  height: 34px;
-  background: url("../img/telegram_icon.svg") no-repeat;
-}
-
-.icon-whatsapp {
-  width: 33px;
-  height: 33px;
-  background: url("../img/whatsapp_icon.svg") no-repeat;
-}
-
-.icon-vk {
-  width: 46px;
-  height: 33px;
-  background: url("../img/vk_icon.svg") no-repeat;
 }/*# sourceMappingURL=plants_in_interior_style.css.map */
