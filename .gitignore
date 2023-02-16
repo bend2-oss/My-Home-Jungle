@@ -8,6 +8,9 @@
 /dist/!index.html
 /src
 /app
+/magazine
+/plants_in_interior
+/selection_of_plants
 /.gitignore
 gulpfile.js
 # index.html
