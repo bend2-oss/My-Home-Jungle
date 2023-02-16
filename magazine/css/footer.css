@@ -1,4 +1,6 @@
 .main-page__footer {
+    position: relative;
+    z-index: 3;
     height: -moz-fit-content;
     height: fit-content;
     min-width: 320px;
