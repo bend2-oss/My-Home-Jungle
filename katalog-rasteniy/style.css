@@ -497,7 +497,7 @@ img{
 }
 menu{
     margin: 0;
-    margin-top: 470px;
+    margin-top: 410px;
 }
 .menuConteiner ul li{
     display: inline-block;
@@ -558,7 +558,7 @@ menu{
     margin-left: -100%;
     width: 58%;
     height: 40px;
-    transition-duration: 2s;
+    transition-duration: 2,5s;
     
 }
     
