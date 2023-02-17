@@ -7,7 +7,7 @@ export default () => {
         const eh = $('.leftTitle').outerHeight();
         const dh = $('.leftTitle').height();   
         if (wt + wh >= et || wh + wt == dh || eh + et < wh){
-            $('.leftTitle').css('animation', 'leftTitleAni 0.8s linear forwards');
+            $('.leftTitle').css('animation', 'leftTitleAni 1.5s linear forwards');
         }
     });
 
@@ -18,7 +18,7 @@ export default () => {
         const eh = $('.info').outerHeight();
         const dh = $('.info').height();   
         if (wt + wh >= et || wh + wt == dh || eh + et < wh){
-            $('.info').css('animation', 'rightTitleAni 0.8s linear forwards');
+            $('.info').css('animation', 'rightTitleAni 1.3s linear forwards');
         }
     });
 
@@ -29,7 +29,7 @@ export default () => {
         const eh = $('.care').outerHeight();
         const dh = $('.care').height();   
         if (wt + wh >= et || wh + wt == dh || eh + et < wh){
-            $('.care').css('animation', 'rightTitleAni 0.8s linear forwards');
+            $('.care').css('animation', 'rightTitleAni 1s linear forwards');
         }
     });
 
