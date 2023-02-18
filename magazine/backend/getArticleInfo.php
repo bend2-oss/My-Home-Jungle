@@ -46,7 +46,4 @@ if($result){
     echo json_encode($result); 
     
   }
-$result->close();
-$conn->close();
-
 ?>
