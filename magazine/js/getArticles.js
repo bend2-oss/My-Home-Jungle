@@ -6,7 +6,7 @@ function articlesColumn(index){
 }
 
 
-fetch('backend/getArticleInfo.php')
+fetch('scripts/php/articlesConnect.php')
     .then(result => result.json())
     .then(data => {
         for (let i = 0; i < data.info.length; i++) {
