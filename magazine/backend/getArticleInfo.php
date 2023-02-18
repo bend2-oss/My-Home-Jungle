@@ -1,49 +1,34 @@
 <?php
-require_once 'login.php';
-$conn = new mysqli($db_host, $db_username, $db_password, $db_name);
-// if($conn->connect_error) mysql_fatal_error()
-if($conn->connect_error) die("Fatal Error");
+$db_host = 'localhost';
+$db_name = 'my-home-jungle_db';
+$db_user = 'rinat';
+$db_pass = 'sweethome89';
+mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
+$mysqli = new mysqli($db_host, $db_user, $db_pass, $db_name);
+$mysqli->set_charset("utf8mb4");
 
-// function mysql_fatal_error(){
-//     echo <<< _END
-//     К сожалению, завершить запрашиваемую задачу
-//     не представилось возможным. Было получено следующее
-//     сообщение об ошибке:
-//         <p>Fatal Error</p>
-//     Пожалуйста, нажмите кнопку возврата вашего браузера и 
-//     повторите попытку. Если прорблемы не прекратятся, пожалуйста, 
-//     <a href="mailto:test@mail.ru">сообщите о них нашему администратору</a>
-//     Спасибо.
-//     _END;
-// }
-
-
-$query = "SELECT * FROM `article`";
+$result = $mysqli->query('SELECT * FROM `article`');
 $array = [];
-$result = $conn->query($query);
 
-if($result){
+if ($result) {
 
-    while ($row = $result->fetch_row()) {
-        $array[] = $row;
+    while ($row = $result->fetch_assoc()) {
+        $array = $row;
     }
 
-    // Формируем массив для JSON ответа
     $result = array(
-      'info' => $array,
-      'code' => 'ok'
-    ); 
+        'info' => $array,
+        'code' => 'success'
+    );
 
-    // Переводим массив в JSON
-    echo json_encode($result); 
-    
-  }else{
+    echo json_encode($result);
+    exit();
+} else {
 
     $result = array(
-      'code' => 'error',
-      'info' => mysqli_error($conn)
-    ); 
-    echo json_encode($result); 
-    
-  }
-?>
+        'code' => 'error',
+        'info' => mysqli_error($conn)
+    );
+    echo json_encode($result);
+    exit();
+}
