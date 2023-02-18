@@ -52,25 +52,24 @@ function getInfo(){
     $.ajax({
         url:     "../backend/getArticleInfo.php", //url страницы
         type:     "POST", //метод отправки
-        dataType: "html", //формат данных
+        dataType: "json", //формат данных
 
         success: function(response) { //Данные отправлены успешно
-        	result = $.parseJSON(response);
-            console.log(result);
-            if(result.code != 'error'){
-                for(i=0; i<result.info.length; i++){
-                    row = result.info[i];
+            console.log(response);
+            if(response.code != 'error'){
+                for(i=0; i<response.info.length; i++){
+                    row = response.info[i];
                     card = articleCard(row[4], row[2]);
                     let column = articlesColumn(i)
                     $(column).append(card);
                 }
             }else{
-                console.log(result);
+                console.log(response);
             }
 
     	},
     	error: function(response) { // Данные не отправлены
-            console.log(result);
+            console.log(response);
     	}
  	});
 }
