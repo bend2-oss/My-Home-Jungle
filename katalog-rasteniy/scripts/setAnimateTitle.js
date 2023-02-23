@@ -1,5 +1,4 @@
 export default () => {
-   
    $(window).scroll(function(){
         const wt = $(window).scrollTop();
         const wh = $(window).height();
