@@ -20,6 +20,8 @@
     font-weight: 600;
 }
 
+
+
 * {
     box-sizing: border-box;
 }   
@@ -297,12 +299,10 @@ img{
 .fikusConteiner{
     
     background-color:var(--pink-color);
-    padding-bottom: 570px;
+    padding-bottom: 63px;
 }
 .fikusConteiner_titlePartConteiner{
-    position: relative;
-    top: 0;
-    left: 0;
+   
     background-color:#87957E;
     border: 1px solid var(--green-color);
     border-radius: 6px;
@@ -351,14 +351,12 @@ img{
     padding: 0;
     width: 100%;
     background-color: var(--pink-color);
-    padding-bottom: 100px;
 }
 .fikusConteiner_mainPartConteiner_block{
-    position: absolute;
-    top: 156px;
-    left: calc(50% - 670px);
+    
     width: 1330px;
     margin: 0 auto;
+    margin-top: -36px;
     padding-top: 54px;
 
     background-color: #FFFFFF;
@@ -369,6 +367,9 @@ img{
       
 }
 .fikusConteiner_mainPartConteiner_block_content{
+    position: relative;
+    top: 0;
+    left: 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -376,14 +377,21 @@ img{
     justify-content: center;
     align-items: center;
 }
-
-.image img{
+.image{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 146px;
+    z-index: 2;
+}
+.image img{    
     box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.25);
-    padding-bottom: 40px;
-    width: 40px;
+    z-index: 5;
 }
 .fikusConteiner_content{
-    
+    position: absolute;
+    top: 25px;
+    left: 146px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -394,11 +402,13 @@ img{
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    width: 42%;   
+    width: 42%; 
     
     margin-left: -4.5px;
+    z-index: 0;
 }
 .fikusConteiner_content_part{
+    
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -413,14 +423,45 @@ img{
 
     border-radius: 0px 15px 15px 0px;
 }
+.one{   
+    animation: ani 0.2s linear forwards;    
+    
+}
+.two{
+   
+    animation: ani 0.35s linear forwards;
+}
+.three{
+    
+    animation: ani 0.5s linear forwards;
+}
+.four{
+    
+    animation: ani 0.65s linear forwards;
+}
+.five{
+    
+    animation: ani 0.8s linear forwards;
+    
+}
+@keyframes ani {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(489px);
+    }
+}    
+  
 .fikusConteiner_content_text{
+
     display: flex;
     height: 50px;
 
     padding-left: 16px;
 
     color: var(--green-color);
-    padding-top: 0;
 }
 .minPadding-text{
     padding-left: 8px;
@@ -451,7 +492,12 @@ img{
     padding-left:0;
     margin: 0 auto;
     padding-bottom: 24px;
+    padding-top: 40px;
     padding-left: 90px;
+}
+menu{
+    margin: 0;
+    margin-top: 410px;
 }
 .menuConteiner ul li{
     display: inline-block;
@@ -460,12 +506,21 @@ img{
     padding-left: 14px;
 
 }
+.menuConteiner ul li:last-child{
+    border-right: none;
+
+}
 .menuConteiner a{
     position: relative;
     font-weight: 400;
     font-size: 20px;
     line-height: 20px;
     color: #3A4736;
+    opacity: 0.7;
+}
+.menuConteiner a:hover,
+.menuConteiner a:focus{
+    opacity: 1;
 }
 .menuConteiner a:after {
 	display: block;
@@ -485,7 +540,7 @@ img{
 	width: 100%;
 }
 .textConteinerBlock{
-    position: relative;
+    
     max-width: 1210px;
     margin: 0 auto;
 }
@@ -498,16 +553,32 @@ img{
     color: var(--pink-color);
 }
 .leftTitle{
-    position: absolute;
     margin:0;
-    left: -120px;
+    margin-left: -120px;
+    margin-left: -100%;
     width: 58%;
     height: 40px;
+    
+}
+    
+
+@keyframes leftTitleAni{
+    0%{
+        margin-left: -8000000px;
+    }
+    30%{
+        margin-left:-500px;
+    }
+    60%{
+        margin-left: -300px;
+    }
+    100%{
+        margin-left: -120px;
+    }
 }
 .leftTitle h2 {
     margin: 0 auto;
     padding-left: calc(100% - 580px);
-    z-index: 3;
 }
 .title h2{
     margin: 0 auto;
@@ -526,7 +597,7 @@ img{
     justify-content: center;
 }
 .slider{
-    padding-top: 70px;
+    padding-top: 30px;
 
     width: 44%;
     border-right: 1px solid var(--green-color);
@@ -581,7 +652,7 @@ img{
     font-size: 24px;
     line-height: 20px;
     color: var(--green-color);
-    opacity: 0.5;
+    opacity: 0.6;
 }
 .slider_imageInterierLink a:after {
 	display: block;
@@ -616,23 +687,33 @@ img{
     margin-bottom: 100px;
 }
 .rightTitle{
-    position: absolute;
-    width: 70%;    
-    right: -120px;
-    margin-top: 44px;
-    padding-left: 66px;
+    width: calc(100% + 120px);  
+    margin-top: 6px;
+    padding-left: 54px;
     margin-left: -36px;
     height: 40px;
 }
+
+@keyframes rightTitleAni{
+    0%{
+        margin-left: 8000000px;
+    }
+    30%{
+        margin-left: 600px;
+    }
+    60%{
+        margin-left: 300px;
+    }
+    100%{
+        margin-left: -36px;
+    }
+}
 .content_block_text{
-    position: relative;
-    top: 0;
-    left: 0;
-    padding: 100px 0 0 20px;
+    padding: 0 0 54px 20px;
 
     color: var(--green-color);
 }
-.content_block_text{
+.content_block_text p{
     font-weight: 400;
     font-size: 17px;
     line-height: 23px;
