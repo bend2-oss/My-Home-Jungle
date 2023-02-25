@@ -24,6 +24,8 @@
 
 * {
     box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }   
 
 body{
@@ -372,11 +374,14 @@ body::-webkit-scrollbar-track{
     justify-content: space-between;
 }
 .articlelBlock_card_title{
+    margin-bottom: 20px;
+
     font-weight: 500;
     font-family:'Raleway500', 'Arial', sans-serif;
     font-size: 24px;
     line-height: 20px;
     color: #000000;
+    
 }
 .articlelBlock_card_image{
     height: 462px;
