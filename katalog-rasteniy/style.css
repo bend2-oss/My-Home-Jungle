@@ -203,6 +203,7 @@ body::-webkit-scrollbar-track{
     -webkit-transition: 0.7s;
     -o-transition: 0.7s;
     transition: 0.7s;
+    outline: none;
 }
 
 .header-main .header__container .header__right-block .right-block__search-head .search-head__input::-moz-placeholder {

@@ -203,6 +203,7 @@ body::-webkit-scrollbar-track{
     -webkit-transition: 0.7s;
     -o-transition: 0.7s;
     transition: 0.7s;
+    outline: none;
 }
 
 .header-main .header__container .header__right-block .right-block__search-head .search-head__input::-moz-placeholder {
@@ -356,7 +357,7 @@ body::-webkit-scrollbar-track{
     padding-bottom: 452px;
 }
 .articlelBlock{
-    width: 66%;
+    width: 64%;
     margin-bottom: 50px;
 }
 .articlelBlock_card{
@@ -385,24 +386,32 @@ body::-webkit-scrollbar-track{
 }
 .articlelBlock_card_image{
     height: 462px;
-    width: 94%;
     background-color: #D9D9D9;
     margin-bottom: 20px;
 
 }
 .articlelBlock_card_text{
-    width: 100%;
     font-family:'Raleway400', 'Arial', sans-serif;
     font-weight: 400;
     font-size: 17px;
     line-height: 23px;
     color: var(--green-color);
 }
+
+.articlelBlock_card_text_next{
+    text-align: right;
+    font-size: 20px;
+    line-height: 20px;
+    color: #87957E;
+    cursor: pointer;
+    display: none;
+}
+
 figure{
     margin: 0;
 }
 .asideBlock{
-    margin-top: 60px;
+    margin-top: 40px;
     width: 280px;
 }
 .asideBlockCard{
@@ -416,10 +425,15 @@ figure{
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
 }
-.smollFlag{
+.smollflag{
     position: absolute;
     top: 4px;
     right: 4px;
+
+    padding: 2px 2px;
+
+    background: rgba(217, 217, 217, 0.6);
+    border-radius: 6px;
 
     cursor: pointer;
 }
@@ -509,6 +523,7 @@ figure{
   }
   .footer-navigation-user {
     margin: 0;
+    margin-left: 40px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -516,7 +531,38 @@ figure{
     -ms-flex-align: center;
     align-items: center;   
 }
-  .icon-vk{
-    margin-right: 10px;
+
+  .arrowTop{
+    position: fixed;
+    z-index: 1;
+    bottom: 24px;
+    right: calc((100% - 1330px)/6);
+    /* opacity: 0.5; */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+     align-items: center;
+    display: none;
+  }
+  .arrowTop p{
+    margin-top: 4px;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+    color: #3A4736;
+  }
+
+  .show {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 
