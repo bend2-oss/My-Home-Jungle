@@ -4,4 +4,4 @@ import setMaxTextLetter from "./setMaxTextLetter.js";
 
 setArrowUp();
 setStroke();
-setMaxTextLetter();
+// setMaxTextLetter();
