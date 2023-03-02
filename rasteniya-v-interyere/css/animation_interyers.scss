@@ -1,0 +1,36 @@
+$color-button-hover: #3A4736;
+
+$font-size: 20px;
+$line-height: 20px;
+$font-weight: 400;
+
+$border-width: 1px;
+
+$border: $border-width solid $color-button-hover;
+
+
+.article-card:hover{
+    position: relative;
+    opacity: 1;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+
+.popular-last-link:visited, .popular-last-link:hover, .popular-last-link:active{
+    font-family: 'Roboto', sans-serif;
+    font-weight: $font-weight;
+    font-size: $font-size;
+    line-height: $line-height;
+    text-decoration: underline;
+}
+
+.button-item:visited, .button-item:hover, .button-item:active{
+    color: $color-button-hover;
+    border: $border;
+    cursor: pointer;
+}
+
+.card:hover .card-button-circle{
+    opacity: 1;
+}

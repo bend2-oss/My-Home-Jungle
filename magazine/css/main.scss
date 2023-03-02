@@ -13,7 +13,7 @@ $article-flag-text: #fff;
 
 
 $border-radius: 6px;
-$border-width: 3px;
+$border-width: 2px;
 
 $articles-line-border: $border-width solid $article-text-color;
 
@@ -172,7 +172,7 @@ main{
     position: relative;
     width: 383px;
     height: fit-content;
-   
+    transition: .5s;
     color: $article-text-color;
 }
 
@@ -208,6 +208,7 @@ main{
     align-items: center;
     padding: 8px 9px;
     justify-content: space-around;
+    border: 1px solid transparent;
     border-radius: $border-radius $border-radius 0 0;
     background-color: $article-flag;
 }
@@ -239,7 +240,7 @@ main{
 
 .article-title{
     font-size: $font-size + 4px;
-    font-weight: 600;
+    // font-weight: 600;
     margin-bottom: 10px;
 }
 
