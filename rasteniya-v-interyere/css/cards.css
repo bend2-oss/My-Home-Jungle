@@ -1,64 +1,4 @@
 @charset "UTF-8";
-#second .cards-column__first .card:first-child .card-button-circle:first-child {
-  top: 26%;
-  left: 24%;
-}
-
-#second .cards-column__first .card:first-child .card-button-circle:nth-child(2) {
-  top: 47%;
-  left: 52%;
-}
-
-#second .cards-column__first .card:first-child .card-button-circle:nth-child(3) {
-  top: 43%;
-  left: 26%;
-}
-
-#second .cards-column__first .card:first-child .card-button-circle:nth-child(4) {
-  top: 82%;
-  left: 17%;
-}
-
-#second .cards-column__second .card:first-child .card-button-circle:first-child {
-  top: 50%;
-  left: 70%;
-}
-
-#second .cards-column__second .card:first-child .card-button-circle:nth-child(2) {
-  top: 10%;
-  left: 5%;
-}
-
-#second .cards-column__second .card:first-child .card-button-circle:nth-child(3) {
-  top: 80%;
-  left: 30%;
-}
-
-#second .cards-column__second .card:first-child .card-button-circle:nth-child(4) {
-  top: 43%;
-  left: 26%;
-}
-
-#second .cards-column__third .card:first-child .card-button-circle:first-child {
-  top: 50%;
-  left: 70%;
-}
-
-#second .cards-column__third .card:first-child .card-button-circle:nth-child(2) {
-  top: 10%;
-  left: 5%;
-}
-
-#second .cards-column__third .card:first-child .card-button-circle:nth-child(3) {
-  top: 80%;
-  left: 30%;
-}
-
-#second .cards-column__third .card:first-child .card-button-circle:nth-child(4) {
-  top: 43%;
-  left: 26%;
-}
-
 /* увеличенная картинка */
 #magnify {
   display: none;
@@ -69,12 +9,14 @@
 }
 
 #magnify .magnify-card {
-  width: 100%;
-  height: 850px;
+  width: 900px;
+  height: 800px;
 }
 
 #magnify .magnify-card > .card-image {
   width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 /* затемняющий фон */
@@ -86,7 +28,7 @@
   left: 0;
   height: 100%;
   width: 100%;
-  opacity: 0.7;
+  opacity: 0.8;
   z-index: 9990;
 }
 
@@ -115,4 +57,12 @@
 
 #right {
   background: url("../img/rightButton.svg") no-repeat center center;
+}
+
+#save {
+  width: 18px;
+  height: 20px;
+  cursor: pointer;
+  position: absolute;
+  background: url("../img/saveButton.svg") no-repeat center center;
 }/*# sourceMappingURL=cards.css.map */

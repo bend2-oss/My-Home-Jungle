@@ -68,7 +68,6 @@ function outputArticles(data){
     
     if( data.info.length % 3 !== 0 && data.info.length % 2 !== 0){
         
-        
         for(let i = 0; i <= i1; i++){
             let card = articleCard(data.info[i].foto, data.info[i].head, data.info[i].date, data.info[i].author)
             $('.articles-column__first').append(card)
@@ -100,9 +99,7 @@ function outputArticles(data){
             $('.articles-column__third').append(card)
         }
     }
-    
 
-    
 }
 
 function allArticles(){
