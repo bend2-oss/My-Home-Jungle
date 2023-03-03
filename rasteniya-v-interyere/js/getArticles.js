@@ -22,7 +22,7 @@ function articleCard(foto, head, date, author){
 }
 
 function outputArticles(data){
-    for(let i = 0; i <= data.info.length; i++){
+    for(let i = 0; i <  data.info.length; i++){
         let card = articleCard(data.info[i].foto, data.info[i].head, data.info[i].date, data.info[i].author)
         $('.articles').append(card)
     }

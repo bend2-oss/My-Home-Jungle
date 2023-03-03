@@ -214,6 +214,7 @@ main {
 
 .article-link {
   font-size: 12px;
+  font-feature-settings: "pnum" on, "lnum" on;
 }
 
 .article-button-favourite {
