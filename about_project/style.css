@@ -39,6 +39,7 @@ body{
     
 }
 h1{
+    color: var(--green-color);
     font-family:'Raleway500', 'Arial', sans-serif;
     font-size: 36px;
     line-height: 20px;
@@ -95,6 +96,8 @@ header ul li{
     z-index: 100;
     width: 100%;
     position: sticky;
+    border: 1px solid var(--green-color);
+    border-radius:6px;
 }
 
 .header-main .header__container {
@@ -286,7 +289,7 @@ header ul li{
     font-family:'Raleway500', 'Arial', sans-serif;
     font-weight: 500;
     font-size: 17px;
-    line-height: 26px;
+    line-height: 23px;
     color: #3A4736;
 }
 .main_block_content_text{

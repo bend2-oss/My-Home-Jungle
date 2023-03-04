@@ -39,12 +39,13 @@ body{
     
 }
 h1{
-    margin: 0 auto;
-    padding: 0;
-    padding-right: 32px;
+    color: var(--green-color);
     font-family:'Raleway500', 'Arial', sans-serif;
+    font-size: 36px;
+    line-height: 20px;
     font-weight: 500;
     text-indent: 3px;
+    padding-bottom: 30px;
 }
 p{
     margin: 0 auto;
@@ -97,6 +98,8 @@ body::-webkit-scrollbar-track{
     z-index: 100;
     width: 100%;
     position: sticky;
+    border: 1px solid var(--green-color);
+    border-radius:6px;
 }
 
 .header-main .header__container {
@@ -270,7 +273,78 @@ body::-webkit-scrollbar-track{
     stroke: #87957E;
 }
 
+.main_block{
+    width: 1210px;
+    margin: 0 auto;
+    margin-bottom: 28px;
+    padding: 40px 20px 206px 20px;
 
+    background: #FFFFFF;
+    box-shadow: -10px 10px 15px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+.main_block_topText{
+    margin-bottom: 30px;
+
+    font-family:'Raleway500', 'Arial', sans-serif;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 23px;
+    color: #3A4736;
+}
+
+.main_block_list_item, 
+.main_block_list2_item
+.main_block_list2_item_list3_item{
+    
+    font-family:'Raleway500', 'Arial', sans-serif;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 23px;
+    color: #3A4736;    
+}
+
+.main_block_list_item{
+    margin-bottom: 30px;
+}
+.bold{
+    font-family:'Raleway600', 'Arial', sans-serif;
+    font-weight: 600;
+}
+.main_block_list2_item_list3_item{
+    list-style-type:none;
+}
+.main_block_list2_item_list3_item::before{
+    content: "-";
+    color: var(--green-color);
+}
+ol {
+    counter-reset: list1; } 
+   
+ol ol {
+   counter-reset: list2; }
+ol ol ol {
+    counter-reset: list3;}
+
+
+ol li:before {      
+    counter-increment: list1;
+    content: counter(list1) "."; 
+}
+      
+ol ol li:before {
+    counter-increment: list2; 
+    content: counter(list1) "." counter(list2) "."; 
+}
+ol ol ol li:before {
+    counter-increment: list3; 
+    content: counter(list1) "." counter(list2) "." counter(list3) "."; 
+}
+
+.bold{
+    font-family:'Raleway600', 'Arial', sans-serif;
+    font-weight: 600;
+}
 
 footer {
     background-color: #525D4D;
