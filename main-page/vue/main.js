@@ -1,5 +1,7 @@
 import router from './router/router.js'
 import Menu from './components/Menu.js'
+import router2 from './router/router2.js'
+
 
 const app = Vue.createApp({})
 app.use(router)
