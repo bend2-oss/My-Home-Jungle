@@ -1,3 +1,5 @@
+import Modal from './Modal.js'
+
 const form = `<div>
 <form class="account-form" @submit.prevent="onSubmit">
     <h2 class="account-form_title">Настройки профиля</h2>
@@ -86,7 +88,15 @@ const form = `<div>
     </div>
 
     <div class="account-form_submit">
-        <button type="submit">Сохранить изменения</button>
+        <button type="submit" class="account-btn_submit"  @click="showModal = true">Сохранить изменения</button>
+        <teleport to="body">
+        <!-- use the modal component, pass in the prop -->
+            <modal :show="showModal" @close="showModal = false">
+                <template #header>
+                <h3>Изменения сохранены</h3>
+             </template>
+            </modal>
+        </teleport>
     </div>
     
 
@@ -109,24 +119,30 @@ const form = `<div>
         <input type="password" id="change-password_repeat" ref="input_password_repeat">
     </p>
     <div class="change-password_submit">
-        <button type="submit">Сохранить пароль</button>
+        <button type="submit" class="change-pass_btn">Сохранить пароль</button>
     </div>
 </form>
 
 <div class="account-delete_btn">
-    <button v-on:click="getEventData">Удалить аккаут</button>
-    
+    <button v-on:click="getEventData" class="delete_btn">Удалить аккаут</button>
+
 </div>
-</div>    `
+</div>    
+
+`
 
 
 export default {
+    components: {
+        Modal
+    },
     name: 'Form',
     template: form
     ,
     data() {
         return {
             // output: '',
+            showModal: false,
             name: '',
             surname: '',
             date: new Date().toISOString().slice(0, 10),

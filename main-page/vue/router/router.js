@@ -9,6 +9,10 @@ import Selection from '../components/Selection.js'
 import Notifications from '../components/Notifications.js'
 import Privacy from '../components/Privacy.js'
 
+import Saveplants from '../components/Saveplants.js'
+import Savearticles from '../components/Savearticles.js'
+import Saveinterior from '../components/Saveinterior.js'
+import Savecommunity from '../components/Savecommunity.js'
 
 const router = VueRouter.createRouter({
     history: VueRouter.createWebHistory(),
@@ -16,7 +20,22 @@ const router = VueRouter.createRouter({
         {
             path: '/Save',
             component: Save,
-
+            children: [{
+                path: "/Save",
+                component: Saveplants,
+            },
+            {
+                path: "/Save/Savearticles",
+                component: Savearticles,
+            },
+            {
+                path: "/Save/Saveinterior",
+                component: Saveinterior,
+            },
+            {
+                path: "/Save/Savecommunity",
+                component: Savecommunity,
+            }]
         },
         {
             path: '/Community',
@@ -57,6 +76,8 @@ const router = VueRouter.createRouter({
             component: Axios,
 
         },
+
+
     ]
 })
 
