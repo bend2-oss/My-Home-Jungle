@@ -18,61 +18,61 @@ const router = VueRouter.createRouter({
     history: VueRouter.createWebHistory(),
     routes: [
         {
-            path: '/Save',
+            path: '/account.html/Save',
             component: Save,
             children: [{
-                path: "/Save",
+                path: "/account.html/Save",
                 component: Saveplants,
             },
             {
-                path: "/Save/Savearticles",
+                path: "/account.html/Save/Savearticles",
                 component: Savearticles,
             },
             {
-                path: "/Save/Saveinterior",
+                path: "/account.html/Save/Saveinterior",
                 component: Saveinterior,
             },
             {
-                path: "/Save/Savecommunity",
+                path: "/account.html/Save/Savecommunity",
                 component: Savecommunity,
             }]
         },
         {
-            path: '/Community',
+            path: '/account.html/Community',
             component: Community,
 
         },
         {
-            path: '/Message',
+            path: '/account.html/Message',
             component: Message
         },
         {
-            path: '/Myplants',
+            path: '/account.html/Myplants',
             component: Myplants
         },
         {
-            path: '/Calendar',
+            path: '/account.html/Calendar',
             component: Calendar
         },
         {
-            path: '/Selection',
+            path: '/account.html/Selection',
             component: Selection
         },
         {
-            path: '/',
+            path: '/account.html/',
             component: Form,
             alias: '/'
         },
         {
-            path: '/Notifications',
+            path: '/account.html/Notifications',
             component: Notifications
         },
         {
-            path: '/Privacy',
+            path: '/account.html/Privacy',
             component: Privacy
         },
         {
-            path: '/Axios',
+            path: '/account.html/Axios',
             component: Axios,
 
         },

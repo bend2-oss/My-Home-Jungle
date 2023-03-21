@@ -1,7 +1,7 @@
 import Modal from './Modal.js'
 
 const form = `<div>
-<form class="account-form" @submit.prevent="onSubmit">
+<form class="account-form" @submit.prevent="onSubmit" >
     <h2 class="account-form_title">Настройки профиля</h2>
 
     <div class="account-form_avatar">
@@ -153,7 +153,7 @@ export default {
             mail: '',
             phone: '',
             textarea: '',
-
+            active: true,
         }
     },
 
@@ -163,17 +163,10 @@ export default {
         axios
             .get('/accountConnectG.php')
             .then(response => {
-                // this.name = response.data.info[0].mail,
-                //     this.surname = response.data.info[0].mail,
                 this.mail = response.data.info[0].mail
-                // res.name = response.data.info[0].mail,
-                // res.surname = response.data.info[0].mail
-
             });
 
-        console.log(res);
 
-        // this.name = response.data.info[0].mail
     },
     methods: {
         getEventData: function (e) {
@@ -186,16 +179,13 @@ export default {
                 date: this.$refs.input_date.value,
                 gender: this.$refs.input_gender.value,
             }
-            // this.output = this.$refs.input_name.value
 
             console.log(send);
             if (send.name === '') {
-                // this.output = 'пусто'
                 return
             } else {
                 axios.post('/accountConnectP.php', JSON.stringify(send))
                     .then((response) => {
-                        // this.output = response.data.info[0].pass
                         this.name = response.data.info[0].pass
                     })
                     .catch((error) => {

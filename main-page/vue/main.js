@@ -1,12 +1,52 @@
 import router from './router/router.js'
 import Menu from './components/Menu.js'
-import router2 from './router/router2.js'
 
 
-const app = Vue.createApp({})
+const app = Vue.createApp({
+    data() {
+        return {
+            active: null
+        }
+    },
+    methods: {
+        checkDisplay() {
+            if (window.innerHeight > 600) {
+                this.active = true
+            } else {
+                this.active = false
+            }
+        },
+    },
+    computed: {
+        check() {
+            if (window.innerWidth < 600) return false
+            return true
+        }
+    }
+})
 app.use(router)
 app.mount('#app')
 
 const app2 = Vue.createApp(Menu)
 app2.mount('#container-2')
 
+export default {
+    name: 'main',
+    data() {
+        return {
+            active: true
+        }
+    },
+    methods: {
+        checkDisplay() {
+            if (window.innerHeight < 600) {
+                this.active = false
+            } else {
+                this.active = true
+            }
+        },
+    },
+    mounted() {
+        // this.checkDisplay()
+    }
+}

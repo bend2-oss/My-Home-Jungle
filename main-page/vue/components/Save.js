@@ -1,10 +1,9 @@
-// import router2 from '../router/router2.js'
-// const app3 = Vue.createApp({})
-// app3.use(router2)
-// app3.mount('#app2')
+import Savearticles from "./Savearticles.js"
 
 export default {
-    // el: '#app2',
+    components: {
+        Savearticles
+    },
     name: 'Save',
     data() {
         return {
@@ -17,10 +16,10 @@ export default {
                 <div class="account-save_wrapper">
                     <h2 class="account-save_title">Сохраненое</h2>
                     <div class="account-nav_save">
-                        <router-link to="/save/saveplants" class="link"><button class="account-save_button">Растения</button></router-link>
-                        <router-link to="/save/saveinterior" class="link"><button class="account-save_button">Интерьеры</button></router-link>
-                        <router-link to="/save/savearticles" class="link"><button class="account-save_button">Статьи</button></router-link>
-                        <router-link to="/save/savecommunity" class="link"><button class="account-save_button">Сообщество</button></router-link>
+                        <router-link to="/account.html/save" class="link"><button class="account-save_button">Растения</button></router-link>
+                        <router-link to="/account.html/save/saveinterior" class="link"><button class="account-save_button">Интерьеры</button></router-link>
+                        <router-link to="/account.html/save/savearticles" class="link"><button class="account-save_button">Статьи</button></router-link>
+                        <router-link to="/account.html/save/savecommunity" class="link"><button class="account-save_button">Сообщество</button></router-link>
                     </div>
     
                     <div class="info2">
