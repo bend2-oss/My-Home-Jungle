@@ -5,7 +5,9 @@ import Menu from './components/Menu.js'
 const app = Vue.createApp({
     data() {
         return {
-            active: null
+            active: null,
+            showMain: true,
+            showElse: false
         }
     },
     methods: {
@@ -16,6 +18,11 @@ const app = Vue.createApp({
                 this.active = false
             }
         },
+
+        switchDisplay() {
+            this.showMain = false
+            this.showElse = true
+        }
     },
     computed: {
         check() {

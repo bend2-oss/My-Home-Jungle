@@ -1,7 +1,7 @@
 import Axios from '../components/Axios.js'
 import Message from '../components/Message.js'
 import Form from '../components/Form.js'
-import Save from '../components/Save.js'
+// import Save from '../components/Save.js'
 import Community from '../components/Community.js'
 import Myplants from '../components/Myplants.js'
 import Calendar from '../components/Calendar.js'
@@ -19,7 +19,7 @@ const router = VueRouter.createRouter({
     routes: [
         {
             path: '/account.html/Save',
-            component: Save,
+            component: () => import('../components/Save.js'),
             children: [{
                 path: "/account.html/Save",
                 component: Saveplants,
