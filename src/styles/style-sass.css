@@ -142,7 +142,7 @@ body::-webkit-scrollbar-track {
     margin-bottom: 0;
   }
   .quote-container .gradient-border .quote-div .quote-text {
-    font-size: 19px;
+    font-size: 18px;
     line-height: 1.5;
   }
   .accountCheck {
@@ -739,15 +739,15 @@ body::-webkit-scrollbar-track {
   }
   .header-slider .swiper-wrapper .swiper-slide .container .slider__call .call__title {
     font-weight: 500;
-    font-size: 14px;
-    line-height: 18px;
+    font-size: 22px;
+    line-height: 32px;
     color: #3A4736;
     margin-top: 15px;
   }
   .header-slider .swiper-wrapper .swiper-slide .container .slider__call .call__title span {
     font-weight: 500;
-    font-size: 14px;
-    line-height: 18px;
+    font-size: 22px;
+    line-height: 32px;
     color: #3A4736;
   }
   .header-slider .swiper-wrapper .swiper-slide .container .slider__call .call__slide-2 {
@@ -901,9 +901,9 @@ body::-webkit-scrollbar-track {
     font-family: "Raleway";
     font-style: normal;
     font-weight: 500;
-    font-size: 16px;
-    line-height: 18px;
-    text-align: left;
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: center;
     color: #3A4736;
   }
   .video .video-container .video-div {
@@ -1180,7 +1180,7 @@ body::-webkit-scrollbar-track {
     padding-right: 15px;
   }
   .interior .interior__title {
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 500;
     margin-bottom: 30px;
     padding-top: 40px;
@@ -1193,7 +1193,7 @@ body::-webkit-scrollbar-track {
     position: absolute;
     right: 25px;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 22px;
     line-height: 18px;
     color: #3A4736;
     word-spacing: 0.2em;
@@ -1422,7 +1422,7 @@ body::-webkit-scrollbar-track {
     padding-bottom: 40px;
   }
   .articles .articles__title {
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 500;
     line-height: 18px;
     color: #3A4736;
@@ -1436,7 +1436,7 @@ body::-webkit-scrollbar-track {
     right: 25px;
     padding-right: 15px;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 22px;
     line-height: 18px;
     color: #3A4736;
   }
@@ -1668,7 +1668,7 @@ body::-webkit-scrollbar-track {
   .about-plants .about-plants__title {
     padding-top: 30px;
     padding-bottom: 16px;
-    font-size: 19px;
+    font-size: 22px;
     font-weight: 500;
     line-height: 18px;
     color: #3A4736;
@@ -1680,7 +1680,7 @@ body::-webkit-scrollbar-track {
     right: 25px;
     padding-right: 15px;
     font-weight: 500;
-    font-size: 17px;
+    font-size: 22px;
     line-height: 18px;
   }
   .about-plants .about-plants__title::after {
@@ -2012,7 +2012,7 @@ body::-webkit-scrollbar-track {
     padding-top: 30px;
     padding-bottom: 30px;
     font-weight: 500;
-    font-size: 20px;
+    font-size: 22px;
     line-height: 18px;
     color: #3A4736;
   }
