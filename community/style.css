@@ -254,6 +254,7 @@ body::-webkit-scrollbar-track {
   align-items: center;
 }
 .ask_wrap_button {
+  margin-right: 100px;
   display: flex;
   justify-content: space-between;
 }
