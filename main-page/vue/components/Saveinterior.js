@@ -18,6 +18,42 @@ export default {
                         <img class="account-save_interior-img" src="img/interior/kitchen.jpg" alt="">
                     </div>
                 </div>
+                <div class="account-save_interior-card">
+                    <div class="account-save_interior-imgDiv">
+                        <img class="account-save_interior-img" src="img/interior/kitchen.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="account-save_interior-card">
+                    <div class="account-save_interior-imgDiv">
+                        <img class="account-save_interior-img" src="img/interior/kitchen.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="account-save_interior-card">
+                    <div class="account-save_interior-imgDiv">
+                        <img class="account-save_interior-img" src="img/interior/kitchen.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="account-save_interior-card">
+                    <div class="account-save_interior-imgDiv">
+                        <img class="account-save_interior-img" src="img/interior/kitchen.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="account-save_interior-card">
+                    <div class="account-save_interior-imgDiv">
+                        <img class="account-save_interior-img" src="img/interior/kitchen.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="account-save_interior-card">
+                    <div class="account-save_interior-imgDiv">
+                        <img class="account-save_interior-img" src="img/interior/kitchen.jpg" alt="">
+                    </div>
+                </div>
+
 
             </div>
         </div>

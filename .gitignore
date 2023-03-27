@@ -6,7 +6,7 @@
 /dist/!img
 /dist/!js
 /dist/!index.html
-/src
+# /src
 /app
 /magazine
 /plants_in_interior
@@ -14,5 +14,5 @@
 /katalog-rasteniy copy
 /plantsCard
 /article
-gulpfile.js
+# gulpfile.js
 # index.html
