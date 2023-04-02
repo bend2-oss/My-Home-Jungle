@@ -2,6 +2,10 @@ body {
   background: #EDE1DE;
 }
 
+.btn_back-div {
+  display: none;
+}
+
 .account_person__btn {
   background: rgba(135, 149, 126, 0.3607843137);
   stroke: #EDE1DE;
@@ -781,6 +785,7 @@ body {
   .account-save_wrapper .account-save_title {
     font-size: 20px;
     margin-bottom: 22px;
+    margin-top: 10px;
   }
   .account-save_wrapper .account-nav_save {
     margin-bottom: 22px;
@@ -889,6 +894,14 @@ body {
   }
   .account-save_articles-wrapper .account-save_articles-cards .account-save_articles-card .account-save_articles-imgDiv .account-save_articles-img {
     width: 100%;
+  }
+  .account-save_articles-wrapper .account-save_articles-cards .account-save_articles-card .account-save_articles-caption .account-save_articles-captionText {
+    font-size: 16px;
+    line-height: 12px;
+  }
+  .account-save_articles-wrapper .account-save_articles-cards .account-save_articles-card .account-save_articles-caption .account-save_articles-captionNote {
+    font-size: 12px;
+    line-height: 12px;
   }
   .account-save_articles-wrapper .account-save_articles-cards .account-save_articles-card:nth-child(2n) {
     height: initial;
@@ -1092,6 +1105,24 @@ body {
 }
 
 @media screen and (max-width: 600px) {
+  .btn_back-div {
+    padding-top: 10px;
+    text-align: right;
+    display: block;
+  }
+  .btn_back-div .btn_back {
+    width: 79px;
+    height: 30px;
+    margin-right: 6px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    background: #fff;
+    border: 1px solid #87957e;
+    border-radius: 6px;
+    cursor: pointer;
+    color: #87957e;
+  }
   .account-save_community-wrapper {
     display: none;
   }
