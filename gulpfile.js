@@ -1,26 +1,27 @@
-const gulp = require('gulp')
-const less = require('gulp-less') // Переводит из less в обычный CSS
-const rename = require('gulp-rename') // Добавляет к конечный файлам main.min.js/css в папке dist
-const cleanCSS = require('gulp-clean-css') // Минификация файла стилей CSS
-const autoprefixer = require('gulp-autoprefixer')
-const sourcemaps = require('gulp-sourcemaps') // используется для отображения файла со стилями или скриптами из папки src в инструментах разработчика браузера, а не в dist
-const babel = require('gulp-babel') // позволяющих преобразовывать код в совместимую версию JavaScript для более старых браузеров
-const uglify = require('gulp-uglify') // позволяет минифицировать и оптимизировать код js
-const htmlmin = require('gulp-htmlmin') // Позволяет минифицировать HTML
-const concat = require('gulp-concat') // собирает все файлы js в один
-const del = require('del') // удаляет каталог dist
-const imagemin = require('gulp-imagemin') // Сжимает изображения
-const size = require('gulp-size'); // Показывает размеры файлов в консоли
-const newer = require('gulp-newer'); // Отслеживает только новые файлы
-const browsersync = require('browser-sync').create() // Отслежтвание изменений в реальном времени, открытие страницы
-const sass = require('gulp-sass')(require('sass')); // Препроцессор SASS и SCSS
-const order = require("gulp-order");
+import gulp from 'gulp'
+import rename from 'gulp-rename'
+import cleanCSS from 'gulp-clean-css'
+import autoprefixer from 'gulp-autoprefixer'
+import sourcemaps from 'gulp-sourcemaps'
+import babel from 'gulp-babel'
+import uglify from 'gulp-uglify'
+import htmlmin from 'gulp-htmlmin'
+import concat from 'gulp-concat'
+import del from 'del'
+import imagemin from 'gulp-imagemin'
+import size from 'gulp-size'
+import newer from 'gulp-newer'
+import browsersync from 'browser-sync'
+import dartSass from 'sass';
+import gulpSass from 'gulp-sass';
+const sass = gulpSass(dartSass);
 
+import include from 'gulp-include'
 
-
+import webpackStream from 'webpack-stream'
 
 // Пути к изначальным файлам и файлам назначения
-const paths = {
+export const paths = {
     html: {
         src: 'src/*.html',
         dest: 'main-page'
@@ -31,7 +32,7 @@ const paths = {
         dest: "main-page/css"
     },
     scripts: {
-        src: "src/scripts/**/*",
+        src: "src/scripts/**/*.js",
         dest: "main-page/scripts/js"
     },
     images: {
@@ -48,17 +49,17 @@ const paths = {
 
 
 // Очистка каталога
-function clean() {
+export function clean() {
     return del(['main-page/**', '!main-page/img', '!main-page/vue', '!main-page/fonts']) // !dist/img исключаем из удаления каталог img
 }
 
 
-function fonts() {
+export function fonts() {
     return gulp.src(paths.fonts.src)
         .pipe(gulp.dest(paths.fonts.dest))
 }
 
-function html() {
+export function html() {
     return gulp.src(paths.html.src)
         .pipe(htmlmin({ collapseWhitespace: true }))
         .pipe(size({
@@ -69,7 +70,7 @@ function html() {
 }
 
 // Задача для обработки стилей
-function styles() {
+export function styles() {
     return gulp.src(paths.styles.src)
         .pipe(sourcemaps.init())
         // .pipe(less())
@@ -93,34 +94,32 @@ function styles() {
 }
 
 //Задача для обработки скриптов
-function scripts() {
-    return gulp.src(["src/scripts/sliders/swiper-bundle.min.js",
-        "src/scripts/sliders/sliders.js",
-        "src/scripts/articles_db.js",
-        "src/scripts/plants_db.js",
-        "src/scripts/greenbook_db.js",
-        "src/scripts/reg.js",
-        "src/scripts/auth.js",
-        "src/scripts/index.js",
-    ]) //paths.scripts.src 
-        .pipe(sourcemaps.init())
+export function scripts() {
+    return gulp.src(paths.scripts.src)
         .pipe(babel({
             presets: ['@babel/preset-env']
         }))
-        .pipe(uglify())
-        .pipe(size({
-            showFiles: true
+        .pipe(webpackStream({
+            mode: 'production',
+            entry: {
+                main: './src/scripts/index.js',
+                greenbook: './src/scripts/greenbook_db.js',
+                swiper: './src/scripts/Sliders/swiper-bundle.min.js',
+                slider: './src/scripts/Sliders/sliders.js',
+            },
+            output: {
+                filename: '[name].min.js',
+            },
+            //   devtool: 'source-map',
         }))
-        .pipe(concat({ path: 'main.min.js', stat: { mode: 0666 } }))
-        // .pipe(concat('main.min.js'))
-        .pipe(sourcemaps.write(''))
+        // .pipe(uglify())
         .pipe(gulp.dest(paths.scripts.dest))
-        .pipe(browsersync.stream())
+
 }
 
 
 //Для сжжатия изображений
-function img() {
+export function img() {
     return gulp.src(paths.images.src)
         .pipe(newer(paths.images.dest))
         .pipe(imagemin({
@@ -133,7 +132,7 @@ function img() {
 }
 
 // Отслеживание изменений
-function watch() {
+export function watch() {
     browsersync.init({
         server: {
             baseDir: "./main-page/"
@@ -146,14 +145,6 @@ function watch() {
     gulp.watch(paths.images.src, img)
 }
 
-const build = gulp.series(fonts, clean, html, gulp.parallel(styles, scripts, img, fonts), watch)
+export const build = gulp.series(fonts, clean, html, gulp.parallel(styles, scripts, img, fonts), watch)
 
-exports.clean = clean
-exports.fonts = fonts
-exports.img = img
-exports.html = html
-exports.styles = styles
-exports.scripts = scripts
-exports.watch = watch
-exports.build = build
-exports.default = build
+export default build

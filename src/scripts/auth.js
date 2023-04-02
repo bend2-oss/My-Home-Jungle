@@ -1,31 +1,31 @@
-function auth(state) {
+window.auth = function auth(state) {
 	if (state === 'none') {
 		document.querySelector('.authModal').innerHTML = ""
 		return
 	} else {
 
-		if(localStorage.getItem('gmailAuth') != null) {
+		if (localStorage.getItem('gmailAuth') != null) {
 			document.querySelector('.authModal').innerHTML = ""
 			window.open('account.html', '_blank');
 			return
 		}
-		if(localStorage.getItem('auth') != null) {
+		if (localStorage.getItem('auth') != null) {
 			document.querySelector('.authModal').innerHTML = ""
 			window.open('account.html', '_blank');
 			return
 		}
 
-		if(localStorage.getItem('vkAuthId') != null) {
+		if (localStorage.getItem('vkAuthId') != null) {
 			document.querySelector('.authModal').innerHTML = ""
 			window.open('account.html', '_blank');
 			return
 		}
 
 		document.querySelector('.authModal').innerHTML = `
-		<div id="filter_2" onclick="auth('none')"></div>
+		<div id="filter_2"  onclick="auth('none')"></div>
 		<div class="auth">
 		<div class="auth__wrapper">
-			<svg onclick="auth('none')" class="auth__close" xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+			<svg class="auth__close" onclick="auth('none')" xmlns="http://www.w3.org/2000/svg" width="12" height="12"
 				viewBox="0 0 9 8">
 				<path d="M8 0.75L1.5 7.25M1.5 0.75L8 7.25" stroke-width="1.5" stroke-linecap="round"
 					stroke-linejoin="round" />

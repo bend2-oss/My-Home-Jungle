@@ -18,12 +18,15 @@
     <meta name="theme-color" content="#ffffff">
 
     <link rel="stylesheet" href="css/main.min.css">
+    <script defer src="scripts/js/swiper.min.js"></script>
+    <script defer src="scripts/js/slider.min.js"></script>
     <script defer="defer" src="scripts/js/main.min.js"></script>
     <script defer src="scripts/js/gmailAuth.js"></script>
     <script src="scripts/accountCheck.js"></script>
 
     <script src="/scripts/js/card_db.js"></script>
     <script src="/scripts/js/articleCard_db.js"></script>
+
 
 
     <!-- <link rel="stylesheet" href="styles/slider/swiper-bundle.css"> -->
@@ -113,9 +116,9 @@
                 <div class="swiper-slide"><img class="swiper-slide__img" src="img/header-slider/Slider_1.jpg" alt="">
                     <div class="container">
                         <div class="slider__call">
-                            <h1 class="call__title">Сохраняйте интерьеры, <span style="display: block;">растения, статьи в </span><span style="display: block;">личном кабинете</span></h1>
-                           <button
-                                onclick="registration('block')" class="call__btn">Настроить</button>
+                            <h1 class="call__title">Сохраняйте интерьеры, <span style="display: block;">растения, статьи
+                                    в </span><span style="display: block;">личном кабинете</span></h1>
+                            <button onclick="registration('block')" class="call__btn">Настроить</button>
                         </div>
                     </div>
                 </div>
@@ -806,7 +809,7 @@
             }, 500);
         }
 
-        function phoneMenu(state) {
+        window.phoneMenu = function (state) {
             document.querySelector('.phone-menu_filter').style.display = state;
             if (state === 'none') {
                 document.querySelector('.left-block__nav-head').classList.remove('active')

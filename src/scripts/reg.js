@@ -1,4 +1,4 @@
-function registration(state) {
+window.registration = function (state) {
     if (state === 'none') {
         document.querySelector('.regModal').innerHTML = ''
         return
@@ -147,12 +147,12 @@ function registration(state) {
     })
 }
 
-function clearInput() {
+window.clearInput = function () {
     document.getElementById('mail__input').value = '';
     document.getElementById('mail__input').style.borderColor = '#3A4736'
 }
 
-function show_hide_password() {
+window.show_hide_password = function () {
     var input = document.getElementById('password__input');
     if (input.getAttribute('type') == 'password') {
         input.setAttribute('type', 'text');
@@ -161,3 +161,4 @@ function show_hide_password() {
     }
     return false;
 }
+
