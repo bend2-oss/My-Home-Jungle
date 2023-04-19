@@ -1418,9 +1418,9 @@ body::-webkit-scrollbar-track {
 }
 
 @media screen and (max-width: 600px) {
-  .container {
+  /* .container {
     padding-right: 0;
-  }
+  } */
   .articles {
     padding-bottom: 40px;
   }
@@ -1662,9 +1662,9 @@ body::-webkit-scrollbar-track {
 }
 
 @media screen and (max-width: 600px) {
-  .container {
+  /* .container {
     padding-right: 0;
-  }
+  } */
   .about-plants {
     box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.25);
   }
